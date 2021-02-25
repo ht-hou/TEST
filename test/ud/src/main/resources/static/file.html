@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.post("/selectAll",null,function (data) {
+                for (var i=0;i<data.length; i++) {
+                    $("#papers").append("<option value='" + data[i] + "'>" + data[i] + "</option>");
+                }
+            })
+            $("#papers").change(function () {
+                var options=$("#papers option:selected");
+               var href = $("#C").attr("href")
+
+               href=(href +'?fileName='+ options.val());
+                $("a").attr("href",href);
+            })
+        })
+    </script>
+</head>
+<body>
+<form id="upload" enctype="multipart/form-data" action="http://localhost:9002/upload" method="post">
+    <input type="file" name="file" />
+    <input type="submit" value="提交" />
+</form>
+<a id="C" href="http://localhost:9002/download/file">文件下载</a>
+<br>
+<select id="papers">
+<option>---请选择---</option>
+</select>
+
+</body>
+</html>

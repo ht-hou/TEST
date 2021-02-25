@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.t.ud.mapper.UDMapper" >
+
+
+    <select id="selectAllFileName" resultType="string">
+        select file_name from UD_Mas
+    </select>
+    <resultMap id="GetFile" type="com.t.ud.pojo.UDMas">
+        <id property="fileId" column="FILE_ID"/>
+        <result property="filePath" column="FILE_PATH"/>
+        <result property="fileName" column="FILE_NAME"/>
+        <!--<result property="createTime" column="CREATE_TIME"/>-->
+        <!--<result property="updateTime" column="UPDATE_TIME"/>-->
+    </resultMap>
+    <select id="selectOne" parameterType="java.lang.String" resultMap="GetFile">
+        select FILE_ID,FILE_PATH,FILE_NAME/*,CREATE_TIME,UPDATE_TIME*/ from  UD_Mas where file_name=#{fileName}
+    </select>
+
+    <insert id="insert" parameterType="com.t.ud.pojo.UDMas">
+        insert into UD_Mas (FILE_PATH,FILE_NAME,CREATE_TIME,UPDATE_TIME) values (#{filePath},#{fileName},#{createTime},#{updateTime})
+    </insert>
+    <delete id="deleteById">
+        delete from UD_Mas where file_id=#{fileId}
+    </delete>
+</mapper>
