@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ttttt.demo.mapper.CityMoreWeatherMapper">
+
+    <!--  @Insert("INSERT INTO CITY_NOW_WEATHER(userName,passWord,user_sex) VALUES(#{userName}, #{passWord}, #{userSex})")
+     public void insertWeather(CityMoreWeather cityMoreWeather);-->
+    <insert id="insertWeather" parameterType="com.ttttt.demo.pojo.CityMoreWeather">
+  INSERT INTO CITY_More_WEATHER (ID,WEATHER_DATE,HIGH,LOW,YMD,WEEK,SUNRISE,SUNSET,AQI,FX,FL,TYPE,NOTICE)
+  values (#{id},#{date},#{high},#{low},#{ymd},#{week},#{sunrise},#{sunset},#{aqi},#{fx},#{fl},#{type},#{notice})
+ </insert>
+    <!--  @Delete("DELETE FROM CITY_More_WEATHER")
+       public void clean();-->
+    <delete id="clean">
+  DELETE FROM CITY_More_WEATHER
+ </delete>
+    <!--void updataWeather(CityMoreWeather cityMoreWeather);-->
+    <update id="updataWeather" parameterType="com.ttttt.demo.pojo.CityMoreWeather">
+        UPDATE  CITY_More_WEATHER SET HIGH=#{high},LOW=#{low},YMD=#{ymd},WEEK=#{week},SUNRISE=#{sunrise},SUNSET=#{sunset},AQI=#{aqi},FX=#{fx},FL=#{fl},TYPE=#{type},NOTICE=#{notice} WHERE ID=#{id} and WEATHER_DATE=#{date}
+ </update>
+</mapper>

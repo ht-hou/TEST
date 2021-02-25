@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ttttt.demo.mapper.CityMapper" >
+<!-- @Select("select * from CITY where city_code like '10%'")
+    @Results(id="cityResults", value={
+            @Result(property="id",   column="ID"),
+            @Result(property="pid",  column="PID"),
+            @Result(property="cityCode", column="CITY_CODE"),
+            @Result(property="cityName", column="CITY_NAME"),
+    })-->
+
+<select id="selectAllCityCode" resultMap="GetCityCode">
+        select * from city where city_code like '10%'
+    </select>
+    <resultMap id="GetCityCode" type="City">
+        <id property="id" column="ID"/>
+        <result property="pid" column="PID"/>
+        <result property="cityCode" column="CITY_CODE"/>
+        <result property="cityName" column="CITY_NAME"/>
+    </resultMap>
+    <!--<select id="selectAllCityCode"  resultMap="GetCityCode">-->
+        <!--select * form  where city_code like '10%'-->
+    <!--</select>-->
+</mapper>

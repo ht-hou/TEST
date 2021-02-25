@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ttttt.demo.mapper.CityNowWeatherMapper" >
+
+ <insert id="insertWeather" parameterType="com.ttttt.demo.pojo.CityNowWeather">
+  INSERT INTO CITY_NOW_WEATHER (ID,SHIDU,PM25,PM10,QUALITY,WENDU,GANMAO)
+  values (#{id},#{shidu},#{pm25},#{pm10},#{quality},#{wendu},#{ganmao})
+ </insert>
+ <!-- @Delete("DELETE FROM CITY_More_WEATHER")
+    public void clean();-->
+
+ <delete id="clean">
+  DELETE FROM CITY_NOW_WEATHER
+ </delete>
+ <!--void updataWeather(CityNowWeather cityNowWeather);
+  INSERT INTO CITY_NOW_WEATHER (ID,SHIDU,PM25,PM10,QUALITY,WENDU,GANMAO)
+  values (#{id},#{shidu},#{pm25},#{pm10},#{quality},#{wendu},#{ganmao})-->
+ <update id="updataWeather" parameterType="com.ttttt.demo.pojo.CityNowWeather">
+UPDATE  CITY_NOW_WEATHER SET SHIDU=#{shidu},PM25=#{pm25},PM10=#{pm10},QUALITY=#{quality},WENDU=#{wendu},GANMAO=#{ganmao} WHERE ID=#{id}
+ </update>
+</mapper>
