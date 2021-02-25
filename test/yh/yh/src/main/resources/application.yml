@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@111.229.74.187:1521:orcl
+    username: pdyj
+    password: 123456
+mybatis:
+  mapper-locations: classpath*:mapping/*Mapper.xml
+  type-aliases-package: com.ex.yh.pojo

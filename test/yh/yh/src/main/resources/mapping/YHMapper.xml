@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ex.yh.dao.YHMapper">
+
+    <resultMap id="getUserDb" type="TResourceData">
+        <id property="rdId" column="rd_id"/>
+        <result property="rcId" column="rc_id"/>
+        <result property="streetCode" column="streetcode"/>
+        <result property="createUserId" column="createuserid"/>
+        <result property="createUserName" column="createusername"/>
+        <result property="createDep" column="createdep"/>
+        <result property="updateUserId" column="updateuserid"/>
+        <result property="rdAddress" column="rd_address"/>
+        <result property="fromDep" column="fromdep"/>
+        <result property="committeeCode" column="committeecode"/>
+        <result property="keyword" column="keyword"/>
+        <result property="tempId" column="temp_id"/>
+        <result property="houseId" column="houseid"/>
+    </resultMap>
+    <select id="getAll" parameterType="java.lang.String" resultMap="getUserDb">
+         select rd_id,rc_id,streetcode,createuserid,createusername,createdep,updateuserid,
+         rd_address,fromdep,committeecode,keyword,temp_id,houseid from T_RESOURCE_DATA
+    </select>
+
+</mapper>
