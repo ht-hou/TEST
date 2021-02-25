@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ex.demo.dao.UserMapper" >
+    <!--User getUser(String userName);
+User findUserById(String userId);
+    void insert(User user);
+
+    void update(User user);-->
+    <resultMap id="getUserDb" type="User">
+        <id property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="userPwd" column="user_pwd"/>
+        <result property="uToken" column="u_token"/>
+        <result property="uTokenCreatetime" column="u_token_createtime"/>
+        <result property="uTokenOvertime" column="u_token_overtime"/>
+    </resultMap>
+    <select id="findUserById" parameterType="java.lang.String" resultMap="getUserDb">
+         select * from T_USER where user_id=#{userId}
+    </select>
+    <select id="getUser" parameterType="java.lang.String" resultMap="getUserDb">
+        select * from T_USER where user_name=#{userName}
+    </select>
+
+<insert id="insert" parameterType="com.ex.demo.pojo.User">
+    insert into T_USER (user_name,user_pwd)values (#{userName},#{userPwd})
+</insert>
+
+<update id="update" parameterType="com.ex.demo.pojo.User">
+  update
+   T_USER
+  set
+  u_token=#{uToken},
+  u_token_createtime=#{uTokenCreatetime},
+  u_token_overtime=#{uTokenOvertime}
+  where user_name=#{userName}
+</update>
+
+</mapper>
