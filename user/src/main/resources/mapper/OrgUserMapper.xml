@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ex.user.mapper.OrgUserMapper">
+  <resultMap id="BaseResultMap" type="com.ex.user.entity.OrgUser">
+    <id column="U_ID" jdbcType="VARCHAR" property="uId" />
+    <result column="UL_ID" jdbcType="VARCHAR" property="ulId" />
+    <result column="U_USERNAME" jdbcType="VARCHAR" property="uUsername" />
+    <result column="U_PASS" jdbcType="VARCHAR" property="uPass" />
+    <result column="U_TRUENAME" jdbcType="VARCHAR" property="uTruename" />
+    <result column="U_SEX" jdbcType="INTEGER" property="uSex" />
+    <result column="U_MOBILE" jdbcType="VARCHAR" property="uMobile" />
+    <result column="U_OFFICETEL" jdbcType="VARCHAR" property="uOfficetel" />
+    <result column="U_OFFICEAREANUM" jdbcType="VARCHAR" property="uOfficeareanum" />
+    <result column="U_OFFICETELSUB" jdbcType="VARCHAR" property="uOfficetelsub" />
+    <result column="U_HOMEAREANUM" jdbcType="VARCHAR" property="uHomeareanum" />
+    <result column="U_HOMETEL" jdbcType="VARCHAR" property="uHometel" />
+    <result column="U_EMAIL" jdbcType="VARCHAR" property="uEmail" />
+    <result column="U_WEIXINID" jdbcType="VARCHAR" property="uWeixinid" />
+    <result column="U_HEADICON" jdbcType="VARCHAR" property="uHeadicon" />
+    <result column="U_ISSTOP" jdbcType="INTEGER" property="uIsstop" />
+    <result column="U_ISADMIN" jdbcType="INTEGER" property="uIsadmin" />
+    <result column="U_SECRET" jdbcType="INTEGER" property="uSecret" />
+    <result column="U_INDEX" jdbcType="INTEGER" property="uIndex" />
+    <result column="U_OUTSIDE" jdbcType="INTEGER" property="uOutside" />
+    <result column="U_CREATETIME" jdbcType="TIMESTAMP" property="uCreatetime" />
+    <result column="U_CREATEDEPID" jdbcType="VARCHAR" property="uCreatedepid" />
+    <result column="U_CREATEUSERID" jdbcType="VARCHAR" property="uCreateuserid" />
+    <result column="U_UPDATETIME" jdbcType="TIMESTAMP" property="uUpdatetime" />
+    <result column="U_UPDATEDEPID" jdbcType="VARCHAR" property="uUpdatedepid" />
+    <result column="U_UPDATEUSERID" jdbcType="VARCHAR" property="uUpdateuserid" />
+    <result column="U_STOPTIME" jdbcType="TIMESTAMP" property="uStoptime" />
+    <result column="U_STOPDEPID" jdbcType="VARCHAR" property="uStopdepid" />
+    <result column="U_STOPUSERID" jdbcType="VARCHAR" property="uStopuserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    U_ID, UL_ID, U_USERNAME, U_PASS, U_TRUENAME, U_SEX, U_MOBILE, U_OFFICETEL, U_OFFICEAREANUM, 
+    U_OFFICETELSUB, U_HOMEAREANUM, U_HOMETEL, U_EMAIL, U_WEIXINID, U_HEADICON, U_ISSTOP, 
+    U_ISADMIN, U_SECRET, U_INDEX, U_OUTSIDE, U_CREATETIME, U_CREATEDEPID, U_CREATEUSERID, 
+    U_UPDATETIME, U_UPDATEDEPID, U_UPDATEUSERID, U_STOPTIME, U_STOPDEPID, U_STOPUSERID
+  </sql>
+  <select id="selectByExample" parameterType="com.ex.user.entity.OrgUserExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ORG_USER
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ORG_USER
+    where U_ID = #{uId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from ORG_USER
+    where U_ID = #{uId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ex.user.entity.OrgUserExample">
+    delete from ORG_USER
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ex.user.entity.OrgUser">
+    insert into ORG_USER (U_ID, UL_ID, U_USERNAME, 
+      U_PASS, U_TRUENAME, U_SEX, 
+      U_MOBILE, U_OFFICETEL, U_OFFICEAREANUM, 
+      U_OFFICETELSUB, U_HOMEAREANUM, U_HOMETEL, 
+      U_EMAIL, U_WEIXINID, U_HEADICON, 
+      U_ISSTOP, U_ISADMIN, U_SECRET, 
+      U_INDEX, U_OUTSIDE, U_CREATETIME, 
+      U_CREATEDEPID, U_CREATEUSERID, U_UPDATETIME, 
+      U_UPDATEDEPID, U_UPDATEUSERID, U_STOPTIME, 
+      U_STOPDEPID, U_STOPUSERID)
+    values (#{uId,jdbcType=VARCHAR}, #{ulId,jdbcType=VARCHAR}, #{uUsername,jdbcType=VARCHAR}, 
+      #{uPass,jdbcType=VARCHAR}, #{uTruename,jdbcType=VARCHAR}, #{uSex,jdbcType=INTEGER}, 
+      #{uMobile,jdbcType=VARCHAR}, #{uOfficetel,jdbcType=VARCHAR}, #{uOfficeareanum,jdbcType=VARCHAR}, 
+      #{uOfficetelsub,jdbcType=VARCHAR}, #{uHomeareanum,jdbcType=VARCHAR}, #{uHometel,jdbcType=VARCHAR}, 
+      #{uEmail,jdbcType=VARCHAR}, #{uWeixinid,jdbcType=VARCHAR}, #{uHeadicon,jdbcType=VARCHAR}, 
+      #{uIsstop,jdbcType=INTEGER}, #{uIsadmin,jdbcType=INTEGER}, #{uSecret,jdbcType=INTEGER}, 
+      #{uIndex,jdbcType=INTEGER}, #{uOutside,jdbcType=INTEGER}, #{uCreatetime,jdbcType=TIMESTAMP}, 
+      #{uCreatedepid,jdbcType=VARCHAR}, #{uCreateuserid,jdbcType=VARCHAR}, #{uUpdatetime,jdbcType=TIMESTAMP}, 
+      #{uUpdatedepid,jdbcType=VARCHAR}, #{uUpdateuserid,jdbcType=VARCHAR}, #{uStoptime,jdbcType=TIMESTAMP}, 
+      #{uStopdepid,jdbcType=VARCHAR}, #{uStopuserid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ex.user.entity.OrgUser">
+    insert into ORG_USER
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uId != null">
+        U_ID,
+      </if>
+      <if test="ulId != null">
+        UL_ID,
+      </if>
+      <if test="uUsername != null">
+        U_USERNAME,
+      </if>
+      <if test="uPass != null">
+        U_PASS,
+      </if>
+      <if test="uTruename != null">
+        U_TRUENAME,
+      </if>
+      <if test="uSex != null">
+        U_SEX,
+      </if>
+      <if test="uMobile != null">
+        U_MOBILE,
+      </if>
+      <if test="uOfficetel != null">
+        U_OFFICETEL,
+      </if>
+      <if test="uOfficeareanum != null">
+        U_OFFICEAREANUM,
+      </if>
+      <if test="uOfficetelsub != null">
+        U_OFFICETELSUB,
+      </if>
+      <if test="uHomeareanum != null">
+        U_HOMEAREANUM,
+      </if>
+      <if test="uHometel != null">
+        U_HOMETEL,
+      </if>
+      <if test="uEmail != null">
+        U_EMAIL,
+      </if>
+      <if test="uWeixinid != null">
+        U_WEIXINID,
+      </if>
+      <if test="uHeadicon != null">
+        U_HEADICON,
+      </if>
+      <if test="uIsstop != null">
+        U_ISSTOP,
+      </if>
+      <if test="uIsadmin != null">
+        U_ISADMIN,
+      </if>
+      <if test="uSecret != null">
+        U_SECRET,
+      </if>
+      <if test="uIndex != null">
+        U_INDEX,
+      </if>
+      <if test="uOutside != null">
+        U_OUTSIDE,
+      </if>
+      <if test="uCreatetime != null">
+        U_CREATETIME,
+      </if>
+      <if test="uCreatedepid != null">
+        U_CREATEDEPID,
+      </if>
+      <if test="uCreateuserid != null">
+        U_CREATEUSERID,
+      </if>
+      <if test="uUpdatetime != null">
+        U_UPDATETIME,
+      </if>
+      <if test="uUpdatedepid != null">
+        U_UPDATEDEPID,
+      </if>
+      <if test="uUpdateuserid != null">
+        U_UPDATEUSERID,
+      </if>
+      <if test="uStoptime != null">
+        U_STOPTIME,
+      </if>
+      <if test="uStopdepid != null">
+        U_STOPDEPID,
+      </if>
+      <if test="uStopuserid != null">
+        U_STOPUSERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uId != null">
+        #{uId,jdbcType=VARCHAR},
+      </if>
+      <if test="ulId != null">
+        #{ulId,jdbcType=VARCHAR},
+      </if>
+      <if test="uUsername != null">
+        #{uUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="uPass != null">
+        #{uPass,jdbcType=VARCHAR},
+      </if>
+      <if test="uTruename != null">
+        #{uTruename,jdbcType=VARCHAR},
+      </if>
+      <if test="uSex != null">
+        #{uSex,jdbcType=INTEGER},
+      </if>
+      <if test="uMobile != null">
+        #{uMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="uOfficetel != null">
+        #{uOfficetel,jdbcType=VARCHAR},
+      </if>
+      <if test="uOfficeareanum != null">
+        #{uOfficeareanum,jdbcType=VARCHAR},
+      </if>
+      <if test="uOfficetelsub != null">
+        #{uOfficetelsub,jdbcType=VARCHAR},
+      </if>
+      <if test="uHomeareanum != null">
+        #{uHomeareanum,jdbcType=VARCHAR},
+      </if>
+      <if test="uHometel != null">
+        #{uHometel,jdbcType=VARCHAR},
+      </if>
+      <if test="uEmail != null">
+        #{uEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="uWeixinid != null">
+        #{uWeixinid,jdbcType=VARCHAR},
+      </if>
+      <if test="uHeadicon != null">
+        #{uHeadicon,jdbcType=VARCHAR},
+      </if>
+      <if test="uIsstop != null">
+        #{uIsstop,jdbcType=INTEGER},
+      </if>
+      <if test="uIsadmin != null">
+        #{uIsadmin,jdbcType=INTEGER},
+      </if>
+      <if test="uSecret != null">
+        #{uSecret,jdbcType=INTEGER},
+      </if>
+      <if test="uIndex != null">
+        #{uIndex,jdbcType=INTEGER},
+      </if>
+      <if test="uOutside != null">
+        #{uOutside,jdbcType=INTEGER},
+      </if>
+      <if test="uCreatetime != null">
+        #{uCreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uCreatedepid != null">
+        #{uCreatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="uCreateuserid != null">
+        #{uCreateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="uUpdatetime != null">
+        #{uUpdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uUpdatedepid != null">
+        #{uUpdatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="uUpdateuserid != null">
+        #{uUpdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="uStoptime != null">
+        #{uStoptime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uStopdepid != null">
+        #{uStopdepid,jdbcType=VARCHAR},
+      </if>
+      <if test="uStopuserid != null">
+        #{uStopuserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ex.user.entity.OrgUserExample" resultType="java.lang.Long">
+    select count(*) from ORG_USER
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update ORG_USER
+    <set>
+      <if test="record.uId != null">
+        U_ID = #{record.uId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ulId != null">
+        UL_ID = #{record.ulId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uUsername != null">
+        U_USERNAME = #{record.uUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uPass != null">
+        U_PASS = #{record.uPass,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uTruename != null">
+        U_TRUENAME = #{record.uTruename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uSex != null">
+        U_SEX = #{record.uSex,jdbcType=INTEGER},
+      </if>
+      <if test="record.uMobile != null">
+        U_MOBILE = #{record.uMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uOfficetel != null">
+        U_OFFICETEL = #{record.uOfficetel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uOfficeareanum != null">
+        U_OFFICEAREANUM = #{record.uOfficeareanum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uOfficetelsub != null">
+        U_OFFICETELSUB = #{record.uOfficetelsub,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uHomeareanum != null">
+        U_HOMEAREANUM = #{record.uHomeareanum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uHometel != null">
+        U_HOMETEL = #{record.uHometel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uEmail != null">
+        U_EMAIL = #{record.uEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uWeixinid != null">
+        U_WEIXINID = #{record.uWeixinid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uHeadicon != null">
+        U_HEADICON = #{record.uHeadicon,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uIsstop != null">
+        U_ISSTOP = #{record.uIsstop,jdbcType=INTEGER},
+      </if>
+      <if test="record.uIsadmin != null">
+        U_ISADMIN = #{record.uIsadmin,jdbcType=INTEGER},
+      </if>
+      <if test="record.uSecret != null">
+        U_SECRET = #{record.uSecret,jdbcType=INTEGER},
+      </if>
+      <if test="record.uIndex != null">
+        U_INDEX = #{record.uIndex,jdbcType=INTEGER},
+      </if>
+      <if test="record.uOutside != null">
+        U_OUTSIDE = #{record.uOutside,jdbcType=INTEGER},
+      </if>
+      <if test="record.uCreatetime != null">
+        U_CREATETIME = #{record.uCreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.uCreatedepid != null">
+        U_CREATEDEPID = #{record.uCreatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uCreateuserid != null">
+        U_CREATEUSERID = #{record.uCreateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uUpdatetime != null">
+        U_UPDATETIME = #{record.uUpdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.uUpdatedepid != null">
+        U_UPDATEDEPID = #{record.uUpdatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uUpdateuserid != null">
+        U_UPDATEUSERID = #{record.uUpdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uStoptime != null">
+        U_STOPTIME = #{record.uStoptime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.uStopdepid != null">
+        U_STOPDEPID = #{record.uStopdepid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uStopuserid != null">
+        U_STOPUSERID = #{record.uStopuserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update ORG_USER
+    set U_ID = #{record.uId,jdbcType=VARCHAR},
+      UL_ID = #{record.ulId,jdbcType=VARCHAR},
+      U_USERNAME = #{record.uUsername,jdbcType=VARCHAR},
+      U_PASS = #{record.uPass,jdbcType=VARCHAR},
+      U_TRUENAME = #{record.uTruename,jdbcType=VARCHAR},
+      U_SEX = #{record.uSex,jdbcType=INTEGER},
+      U_MOBILE = #{record.uMobile,jdbcType=VARCHAR},
+      U_OFFICETEL = #{record.uOfficetel,jdbcType=VARCHAR},
+      U_OFFICEAREANUM = #{record.uOfficeareanum,jdbcType=VARCHAR},
+      U_OFFICETELSUB = #{record.uOfficetelsub,jdbcType=VARCHAR},
+      U_HOMEAREANUM = #{record.uHomeareanum,jdbcType=VARCHAR},
+      U_HOMETEL = #{record.uHometel,jdbcType=VARCHAR},
+      U_EMAIL = #{record.uEmail,jdbcType=VARCHAR},
+      U_WEIXINID = #{record.uWeixinid,jdbcType=VARCHAR},
+      U_HEADICON = #{record.uHeadicon,jdbcType=VARCHAR},
+      U_ISSTOP = #{record.uIsstop,jdbcType=INTEGER},
+      U_ISADMIN = #{record.uIsadmin,jdbcType=INTEGER},
+      U_SECRET = #{record.uSecret,jdbcType=INTEGER},
+      U_INDEX = #{record.uIndex,jdbcType=INTEGER},
+      U_OUTSIDE = #{record.uOutside,jdbcType=INTEGER},
+      U_CREATETIME = #{record.uCreatetime,jdbcType=TIMESTAMP},
+      U_CREATEDEPID = #{record.uCreatedepid,jdbcType=VARCHAR},
+      U_CREATEUSERID = #{record.uCreateuserid,jdbcType=VARCHAR},
+      U_UPDATETIME = #{record.uUpdatetime,jdbcType=TIMESTAMP},
+      U_UPDATEDEPID = #{record.uUpdatedepid,jdbcType=VARCHAR},
+      U_UPDATEUSERID = #{record.uUpdateuserid,jdbcType=VARCHAR},
+      U_STOPTIME = #{record.uStoptime,jdbcType=TIMESTAMP},
+      U_STOPDEPID = #{record.uStopdepid,jdbcType=VARCHAR},
+      U_STOPUSERID = #{record.uStopuserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ex.user.entity.OrgUser">
+    update ORG_USER
+    <set>
+      <if test="ulId != null">
+        UL_ID = #{ulId,jdbcType=VARCHAR},
+      </if>
+      <if test="uUsername != null">
+        U_USERNAME = #{uUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="uPass != null">
+        U_PASS = #{uPass,jdbcType=VARCHAR},
+      </if>
+      <if test="uTruename != null">
+        U_TRUENAME = #{uTruename,jdbcType=VARCHAR},
+      </if>
+      <if test="uSex != null">
+        U_SEX = #{uSex,jdbcType=INTEGER},
+      </if>
+      <if test="uMobile != null">
+        U_MOBILE = #{uMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="uOfficetel != null">
+        U_OFFICETEL = #{uOfficetel,jdbcType=VARCHAR},
+      </if>
+      <if test="uOfficeareanum != null">
+        U_OFFICEAREANUM = #{uOfficeareanum,jdbcType=VARCHAR},
+      </if>
+      <if test="uOfficetelsub != null">
+        U_OFFICETELSUB = #{uOfficetelsub,jdbcType=VARCHAR},
+      </if>
+      <if test="uHomeareanum != null">
+        U_HOMEAREANUM = #{uHomeareanum,jdbcType=VARCHAR},
+      </if>
+      <if test="uHometel != null">
+        U_HOMETEL = #{uHometel,jdbcType=VARCHAR},
+      </if>
+      <if test="uEmail != null">
+        U_EMAIL = #{uEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="uWeixinid != null">
+        U_WEIXINID = #{uWeixinid,jdbcType=VARCHAR},
+      </if>
+      <if test="uHeadicon != null">
+        U_HEADICON = #{uHeadicon,jdbcType=VARCHAR},
+      </if>
+      <if test="uIsstop != null">
+        U_ISSTOP = #{uIsstop,jdbcType=INTEGER},
+      </if>
+      <if test="uIsadmin != null">
+        U_ISADMIN = #{uIsadmin,jdbcType=INTEGER},
+      </if>
+      <if test="uSecret != null">
+        U_SECRET = #{uSecret,jdbcType=INTEGER},
+      </if>
+      <if test="uIndex != null">
+        U_INDEX = #{uIndex,jdbcType=INTEGER},
+      </if>
+      <if test="uOutside != null">
+        U_OUTSIDE = #{uOutside,jdbcType=INTEGER},
+      </if>
+      <if test="uCreatetime != null">
+        U_CREATETIME = #{uCreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uCreatedepid != null">
+        U_CREATEDEPID = #{uCreatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="uCreateuserid != null">
+        U_CREATEUSERID = #{uCreateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="uUpdatetime != null">
+        U_UPDATETIME = #{uUpdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uUpdatedepid != null">
+        U_UPDATEDEPID = #{uUpdatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="uUpdateuserid != null">
+        U_UPDATEUSERID = #{uUpdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="uStoptime != null">
+        U_STOPTIME = #{uStoptime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uStopdepid != null">
+        U_STOPDEPID = #{uStopdepid,jdbcType=VARCHAR},
+      </if>
+      <if test="uStopuserid != null">
+        U_STOPUSERID = #{uStopuserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where U_ID = #{uId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ex.user.entity.OrgUser">
+    update ORG_USER
+    set UL_ID = #{ulId,jdbcType=VARCHAR},
+      U_USERNAME = #{uUsername,jdbcType=VARCHAR},
+      U_PASS = #{uPass,jdbcType=VARCHAR},
+      U_TRUENAME = #{uTruename,jdbcType=VARCHAR},
+      U_SEX = #{uSex,jdbcType=INTEGER},
+      U_MOBILE = #{uMobile,jdbcType=VARCHAR},
+      U_OFFICETEL = #{uOfficetel,jdbcType=VARCHAR},
+      U_OFFICEAREANUM = #{uOfficeareanum,jdbcType=VARCHAR},
+      U_OFFICETELSUB = #{uOfficetelsub,jdbcType=VARCHAR},
+      U_HOMEAREANUM = #{uHomeareanum,jdbcType=VARCHAR},
+      U_HOMETEL = #{uHometel,jdbcType=VARCHAR},
+      U_EMAIL = #{uEmail,jdbcType=VARCHAR},
+      U_WEIXINID = #{uWeixinid,jdbcType=VARCHAR},
+      U_HEADICON = #{uHeadicon,jdbcType=VARCHAR},
+      U_ISSTOP = #{uIsstop,jdbcType=INTEGER},
+      U_ISADMIN = #{uIsadmin,jdbcType=INTEGER},
+      U_SECRET = #{uSecret,jdbcType=INTEGER},
+      U_INDEX = #{uIndex,jdbcType=INTEGER},
+      U_OUTSIDE = #{uOutside,jdbcType=INTEGER},
+      U_CREATETIME = #{uCreatetime,jdbcType=TIMESTAMP},
+      U_CREATEDEPID = #{uCreatedepid,jdbcType=VARCHAR},
+      U_CREATEUSERID = #{uCreateuserid,jdbcType=VARCHAR},
+      U_UPDATETIME = #{uUpdatetime,jdbcType=TIMESTAMP},
+      U_UPDATEDEPID = #{uUpdatedepid,jdbcType=VARCHAR},
+      U_UPDATEUSERID = #{uUpdateuserid,jdbcType=VARCHAR},
+      U_STOPTIME = #{uStoptime,jdbcType=TIMESTAMP},
+      U_STOPDEPID = #{uStopdepid,jdbcType=VARCHAR},
+      U_STOPUSERID = #{uStopuserid,jdbcType=VARCHAR}
+    where U_ID = #{uId,jdbcType=VARCHAR}
+  </update>
+  <!--    int FakeDeleteByPrimaryKey(String userid);-->
+  <update id="FakeDeleteByPrimaryKey" parameterType="java.lang.String">
+     update ORG_USER
+    set U_ISSTOP ='1'
+     where U_ID = #{userid,jdbcType=VARCHAR}
+  </update>
+  <!-- select * from Org_user where U_ID in( select U_ID from org_user_vs_dep where ROLEID='0970D13733124DC62E5B4A08C105A5BE' )
+and U_USERNAME LIKE '1%' and ORG_USER.U_TRUENAME LIKE '_%'-->
+  <!-- List<OrgUser> selectByRoleAndMohu(MohuDto mohuDto);
+
+    List<OrgUser> selectByMohu(MohuDto mohuDto);-->
+<select id="selectByRoleAndMohu" parameterType="com.ex.user.entity.DTO.MohuDto" resultMap="BaseResultMap">
+  select * from Org_user where
+  <if test="roleid != null and roleid != ''">
+    U_ID in( select U_ID from org_user_vs_dep where ROLEID=#{roleid} )
+  </if>
+
+and
+<if test="uUsername != null and uUsername != ''">
+  U_USERNAME LIKE '%'+ #{uUsername,jdbcType=VARCHAR}+'%'
+</if>
+  <if test="uTruename != null and uTruename != ''">
+    U_TRUENAME LIKE '%'+ #{uTruename,jdbcType=VARCHAR}+'%'
+  </if>
+</select>
+</mapper>

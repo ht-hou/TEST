@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ex.user.mapper.OrgDepartmentMapper">
+  <resultMap id="BaseResultMap" type="com.ex.user.entity.OrgDepartment">
+    <id column="D_ID" jdbcType="VARCHAR" property="dId" />
+    <result column="DI_ID" jdbcType="VARCHAR" property="diId" />
+    <result column="MEMID" jdbcType="VARCHAR" property="memid" />
+    <result column="D_PDID" jdbcType="VARCHAR" property="dPdid" />
+    <result column="D_PDIDLIST" jdbcType="VARCHAR" property="dPdidlist" />
+    <result column="D_PDIDLISTCN" jdbcType="VARCHAR" property="dPdidlistcn" />
+    <result column="D_HASCHILD" jdbcType="INTEGER" property="dHaschild" />
+    <result column="D_NAME" jdbcType="VARCHAR" property="dName" />
+    <result column="D_EASYNAME" jdbcType="VARCHAR" property="dEasyname" />
+    <result column="D_ADDRESS" jdbcType="VARCHAR" property="dAddress" />
+    <result column="D_POSTCARD" jdbcType="VARCHAR" property="dPostcard" />
+    <result column="D_SENDDUTYSMS" jdbcType="INTEGER" property="dSenddutysms" />
+    <result column="D_INDEX" jdbcType="INTEGER" property="dIndex" />
+    <result column="D_ISGROUP" jdbcType="INTEGER" property="dIsgroup" />
+    <result column="D_ISSTOP" jdbcType="INTEGER" property="dIsstop" />
+    <result column="D_LEVEL" jdbcType="INTEGER" property="dLevel" />
+    <result column="D_CITY" jdbcType="VARCHAR" property="dCity" />
+    <result column="D_DISTRICT" jdbcType="VARCHAR" property="dDistrict" />
+    <result column="D_STREET" jdbcType="VARCHAR" property="dStreet" />
+    <result column="D_COMMITTEE" jdbcType="VARCHAR" property="dCommittee" />
+    <result column="D_ICON" jdbcType="VARCHAR" property="dIcon" />
+    <result column="D_LOGO" jdbcType="VARCHAR" property="dLogo" />
+    <result column="D_PRITITLE" jdbcType="VARCHAR" property="dPrititle" />
+    <result column="D_CREATETIME" jdbcType="TIMESTAMP" property="dCreatetime" />
+    <result column="D_CREATEDEPID" jdbcType="VARCHAR" property="dCreatedepid" />
+    <result column="D_CREATEUSERID" jdbcType="VARCHAR" property="dCreateuserid" />
+    <result column="D_UPDATETIME" jdbcType="TIMESTAMP" property="dUpdatetime" />
+    <result column="D_UPDATEDEPID" jdbcType="VARCHAR" property="dUpdatedepid" />
+    <result column="D_UPDATEUSERID" jdbcType="VARCHAR" property="dUpdateuserid" />
+    <result column="D_STOPTIME" jdbcType="TIMESTAMP" property="dStoptime" />
+    <result column="D_STOPDEPID" jdbcType="VARCHAR" property="dStopdepid" />
+    <result column="D_STOPUSERID" jdbcType="VARCHAR" property="dStopuserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    D_ID, DI_ID, MEMID, D_PDID, D_PDIDLIST, D_PDIDLISTCN, D_HASCHILD, D_NAME, D_EASYNAME, 
+    D_ADDRESS, D_POSTCARD, D_SENDDUTYSMS, D_INDEX, D_ISGROUP, D_ISSTOP, D_LEVEL, D_CITY, 
+    D_DISTRICT, D_STREET, D_COMMITTEE, D_ICON, D_LOGO, D_PRITITLE, D_CREATETIME, D_CREATEDEPID, 
+    D_CREATEUSERID, D_UPDATETIME, D_UPDATEDEPID, D_UPDATEUSERID, D_STOPTIME, D_STOPDEPID, 
+    D_STOPUSERID
+  </sql>
+  <select id="selectByExample" parameterType="com.ex.user.entity.OrgDepartmentExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ORG_DEPARTMENT
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ORG_DEPARTMENT
+    where D_ID = #{dId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from ORG_DEPARTMENT
+    where D_ID = #{dId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ex.user.entity.OrgDepartmentExample">
+    delete from ORG_DEPARTMENT
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ex.user.entity.OrgDepartment">
+    insert into ORG_DEPARTMENT (D_ID, DI_ID, MEMID, 
+      D_PDID, D_PDIDLIST, D_PDIDLISTCN, 
+      D_HASCHILD, D_NAME, D_EASYNAME, 
+      D_ADDRESS, D_POSTCARD, D_SENDDUTYSMS, 
+      D_INDEX, D_ISGROUP, D_ISSTOP, 
+      D_LEVEL, D_CITY, D_DISTRICT, 
+      D_STREET, D_COMMITTEE, D_ICON, 
+      D_LOGO, D_PRITITLE, D_CREATETIME, 
+      D_CREATEDEPID, D_CREATEUSERID, D_UPDATETIME, 
+      D_UPDATEDEPID, D_UPDATEUSERID, D_STOPTIME, 
+      D_STOPDEPID, D_STOPUSERID)
+    values (#{dId,jdbcType=VARCHAR}, #{diId,jdbcType=VARCHAR}, #{memid,jdbcType=VARCHAR}, 
+      #{dPdid,jdbcType=VARCHAR}, #{dPdidlist,jdbcType=VARCHAR}, #{dPdidlistcn,jdbcType=VARCHAR}, 
+      #{dHaschild,jdbcType=INTEGER}, #{dName,jdbcType=VARCHAR}, #{dEasyname,jdbcType=VARCHAR}, 
+      #{dAddress,jdbcType=VARCHAR}, #{dPostcard,jdbcType=VARCHAR}, #{dSenddutysms,jdbcType=INTEGER}, 
+      #{dIndex,jdbcType=INTEGER}, #{dIsgroup,jdbcType=INTEGER}, #{dIsstop,jdbcType=INTEGER}, 
+      #{dLevel,jdbcType=INTEGER}, #{dCity,jdbcType=VARCHAR}, #{dDistrict,jdbcType=VARCHAR}, 
+      #{dStreet,jdbcType=VARCHAR}, #{dCommittee,jdbcType=VARCHAR}, #{dIcon,jdbcType=VARCHAR}, 
+      #{dLogo,jdbcType=VARCHAR}, #{dPrititle,jdbcType=VARCHAR}, #{dCreatetime,jdbcType=TIMESTAMP}, 
+      #{dCreatedepid,jdbcType=VARCHAR}, #{dCreateuserid,jdbcType=VARCHAR}, #{dUpdatetime,jdbcType=TIMESTAMP}, 
+      #{dUpdatedepid,jdbcType=VARCHAR}, #{dUpdateuserid,jdbcType=VARCHAR}, #{dStoptime,jdbcType=TIMESTAMP}, 
+      #{dStopdepid,jdbcType=VARCHAR}, #{dStopuserid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ex.user.entity.OrgDepartment">
+    insert into ORG_DEPARTMENT
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="dId != null">
+        D_ID,
+      </if>
+      <if test="diId != null">
+        DI_ID,
+      </if>
+      <if test="memid != null">
+        MEMID,
+      </if>
+      <if test="dPdid != null">
+        D_PDID,
+      </if>
+      <if test="dPdidlist != null">
+        D_PDIDLIST,
+      </if>
+      <if test="dPdidlistcn != null">
+        D_PDIDLISTCN,
+      </if>
+      <if test="dHaschild != null">
+        D_HASCHILD,
+      </if>
+      <if test="dName != null">
+        D_NAME,
+      </if>
+      <if test="dEasyname != null">
+        D_EASYNAME,
+      </if>
+      <if test="dAddress != null">
+        D_ADDRESS,
+      </if>
+      <if test="dPostcard != null">
+        D_POSTCARD,
+      </if>
+      <if test="dSenddutysms != null">
+        D_SENDDUTYSMS,
+      </if>
+      <if test="dIndex != null">
+        D_INDEX,
+      </if>
+      <if test="dIsgroup != null">
+        D_ISGROUP,
+      </if>
+      <if test="dIsstop != null">
+        D_ISSTOP,
+      </if>
+      <if test="dLevel != null">
+        D_LEVEL,
+      </if>
+      <if test="dCity != null">
+        D_CITY,
+      </if>
+      <if test="dDistrict != null">
+        D_DISTRICT,
+      </if>
+      <if test="dStreet != null">
+        D_STREET,
+      </if>
+      <if test="dCommittee != null">
+        D_COMMITTEE,
+      </if>
+      <if test="dIcon != null">
+        D_ICON,
+      </if>
+      <if test="dLogo != null">
+        D_LOGO,
+      </if>
+      <if test="dPrititle != null">
+        D_PRITITLE,
+      </if>
+      <if test="dCreatetime != null">
+        D_CREATETIME,
+      </if>
+      <if test="dCreatedepid != null">
+        D_CREATEDEPID,
+      </if>
+      <if test="dCreateuserid != null">
+        D_CREATEUSERID,
+      </if>
+      <if test="dUpdatetime != null">
+        D_UPDATETIME,
+      </if>
+      <if test="dUpdatedepid != null">
+        D_UPDATEDEPID,
+      </if>
+      <if test="dUpdateuserid != null">
+        D_UPDATEUSERID,
+      </if>
+      <if test="dStoptime != null">
+        D_STOPTIME,
+      </if>
+      <if test="dStopdepid != null">
+        D_STOPDEPID,
+      </if>
+      <if test="dStopuserid != null">
+        D_STOPUSERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="dId != null">
+        #{dId,jdbcType=VARCHAR},
+      </if>
+      <if test="diId != null">
+        #{diId,jdbcType=VARCHAR},
+      </if>
+      <if test="memid != null">
+        #{memid,jdbcType=VARCHAR},
+      </if>
+      <if test="dPdid != null">
+        #{dPdid,jdbcType=VARCHAR},
+      </if>
+      <if test="dPdidlist != null">
+        #{dPdidlist,jdbcType=VARCHAR},
+      </if>
+      <if test="dPdidlistcn != null">
+        #{dPdidlistcn,jdbcType=VARCHAR},
+      </if>
+      <if test="dHaschild != null">
+        #{dHaschild,jdbcType=INTEGER},
+      </if>
+      <if test="dName != null">
+        #{dName,jdbcType=VARCHAR},
+      </if>
+      <if test="dEasyname != null">
+        #{dEasyname,jdbcType=VARCHAR},
+      </if>
+      <if test="dAddress != null">
+        #{dAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="dPostcard != null">
+        #{dPostcard,jdbcType=VARCHAR},
+      </if>
+      <if test="dSenddutysms != null">
+        #{dSenddutysms,jdbcType=INTEGER},
+      </if>
+      <if test="dIndex != null">
+        #{dIndex,jdbcType=INTEGER},
+      </if>
+      <if test="dIsgroup != null">
+        #{dIsgroup,jdbcType=INTEGER},
+      </if>
+      <if test="dIsstop != null">
+        #{dIsstop,jdbcType=INTEGER},
+      </if>
+      <if test="dLevel != null">
+        #{dLevel,jdbcType=INTEGER},
+      </if>
+      <if test="dCity != null">
+        #{dCity,jdbcType=VARCHAR},
+      </if>
+      <if test="dDistrict != null">
+        #{dDistrict,jdbcType=VARCHAR},
+      </if>
+      <if test="dStreet != null">
+        #{dStreet,jdbcType=VARCHAR},
+      </if>
+      <if test="dCommittee != null">
+        #{dCommittee,jdbcType=VARCHAR},
+      </if>
+      <if test="dIcon != null">
+        #{dIcon,jdbcType=VARCHAR},
+      </if>
+      <if test="dLogo != null">
+        #{dLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="dPrititle != null">
+        #{dPrititle,jdbcType=VARCHAR},
+      </if>
+      <if test="dCreatetime != null">
+        #{dCreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dCreatedepid != null">
+        #{dCreatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="dCreateuserid != null">
+        #{dCreateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="dUpdatetime != null">
+        #{dUpdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dUpdatedepid != null">
+        #{dUpdatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="dUpdateuserid != null">
+        #{dUpdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="dStoptime != null">
+        #{dStoptime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dStopdepid != null">
+        #{dStopdepid,jdbcType=VARCHAR},
+      </if>
+      <if test="dStopuserid != null">
+        #{dStopuserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ex.user.entity.OrgDepartmentExample" resultType="java.lang.Long">
+    select count(*) from ORG_DEPARTMENT
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update ORG_DEPARTMENT
+    <set>
+      <if test="record.dId != null">
+        D_ID = #{record.dId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.diId != null">
+        DI_ID = #{record.diId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.memid != null">
+        MEMID = #{record.memid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dPdid != null">
+        D_PDID = #{record.dPdid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dPdidlist != null">
+        D_PDIDLIST = #{record.dPdidlist,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dPdidlistcn != null">
+        D_PDIDLISTCN = #{record.dPdidlistcn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dHaschild != null">
+        D_HASCHILD = #{record.dHaschild,jdbcType=INTEGER},
+      </if>
+      <if test="record.dName != null">
+        D_NAME = #{record.dName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dEasyname != null">
+        D_EASYNAME = #{record.dEasyname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dAddress != null">
+        D_ADDRESS = #{record.dAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dPostcard != null">
+        D_POSTCARD = #{record.dPostcard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dSenddutysms != null">
+        D_SENDDUTYSMS = #{record.dSenddutysms,jdbcType=INTEGER},
+      </if>
+      <if test="record.dIndex != null">
+        D_INDEX = #{record.dIndex,jdbcType=INTEGER},
+      </if>
+      <if test="record.dIsgroup != null">
+        D_ISGROUP = #{record.dIsgroup,jdbcType=INTEGER},
+      </if>
+      <if test="record.dIsstop != null">
+        D_ISSTOP = #{record.dIsstop,jdbcType=INTEGER},
+      </if>
+      <if test="record.dLevel != null">
+        D_LEVEL = #{record.dLevel,jdbcType=INTEGER},
+      </if>
+      <if test="record.dCity != null">
+        D_CITY = #{record.dCity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dDistrict != null">
+        D_DISTRICT = #{record.dDistrict,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dStreet != null">
+        D_STREET = #{record.dStreet,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dCommittee != null">
+        D_COMMITTEE = #{record.dCommittee,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dIcon != null">
+        D_ICON = #{record.dIcon,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dLogo != null">
+        D_LOGO = #{record.dLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dPrititle != null">
+        D_PRITITLE = #{record.dPrititle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dCreatetime != null">
+        D_CREATETIME = #{record.dCreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.dCreatedepid != null">
+        D_CREATEDEPID = #{record.dCreatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dCreateuserid != null">
+        D_CREATEUSERID = #{record.dCreateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dUpdatetime != null">
+        D_UPDATETIME = #{record.dUpdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.dUpdatedepid != null">
+        D_UPDATEDEPID = #{record.dUpdatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dUpdateuserid != null">
+        D_UPDATEUSERID = #{record.dUpdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dStoptime != null">
+        D_STOPTIME = #{record.dStoptime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.dStopdepid != null">
+        D_STOPDEPID = #{record.dStopdepid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dStopuserid != null">
+        D_STOPUSERID = #{record.dStopuserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update ORG_DEPARTMENT
+    set D_ID = #{record.dId,jdbcType=VARCHAR},
+      DI_ID = #{record.diId,jdbcType=VARCHAR},
+      MEMID = #{record.memid,jdbcType=VARCHAR},
+      D_PDID = #{record.dPdid,jdbcType=VARCHAR},
+      D_PDIDLIST = #{record.dPdidlist,jdbcType=VARCHAR},
+      D_PDIDLISTCN = #{record.dPdidlistcn,jdbcType=VARCHAR},
+      D_HASCHILD = #{record.dHaschild,jdbcType=INTEGER},
+      D_NAME = #{record.dName,jdbcType=VARCHAR},
+      D_EASYNAME = #{record.dEasyname,jdbcType=VARCHAR},
+      D_ADDRESS = #{record.dAddress,jdbcType=VARCHAR},
+      D_POSTCARD = #{record.dPostcard,jdbcType=VARCHAR},
+      D_SENDDUTYSMS = #{record.dSenddutysms,jdbcType=INTEGER},
+      D_INDEX = #{record.dIndex,jdbcType=INTEGER},
+      D_ISGROUP = #{record.dIsgroup,jdbcType=INTEGER},
+      D_ISSTOP = #{record.dIsstop,jdbcType=INTEGER},
+      D_LEVEL = #{record.dLevel,jdbcType=INTEGER},
+      D_CITY = #{record.dCity,jdbcType=VARCHAR},
+      D_DISTRICT = #{record.dDistrict,jdbcType=VARCHAR},
+      D_STREET = #{record.dStreet,jdbcType=VARCHAR},
+      D_COMMITTEE = #{record.dCommittee,jdbcType=VARCHAR},
+      D_ICON = #{record.dIcon,jdbcType=VARCHAR},
+      D_LOGO = #{record.dLogo,jdbcType=VARCHAR},
+      D_PRITITLE = #{record.dPrititle,jdbcType=VARCHAR},
+      D_CREATETIME = #{record.dCreatetime,jdbcType=TIMESTAMP},
+      D_CREATEDEPID = #{record.dCreatedepid,jdbcType=VARCHAR},
+      D_CREATEUSERID = #{record.dCreateuserid,jdbcType=VARCHAR},
+      D_UPDATETIME = #{record.dUpdatetime,jdbcType=TIMESTAMP},
+      D_UPDATEDEPID = #{record.dUpdatedepid,jdbcType=VARCHAR},
+      D_UPDATEUSERID = #{record.dUpdateuserid,jdbcType=VARCHAR},
+      D_STOPTIME = #{record.dStoptime,jdbcType=TIMESTAMP},
+      D_STOPDEPID = #{record.dStopdepid,jdbcType=VARCHAR},
+      D_STOPUSERID = #{record.dStopuserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ex.user.entity.OrgDepartment">
+    update ORG_DEPARTMENT
+    <set>
+      <if test="diId != null">
+        DI_ID = #{diId,jdbcType=VARCHAR},
+      </if>
+      <if test="memid != null">
+        MEMID = #{memid,jdbcType=VARCHAR},
+      </if>
+      <if test="dPdid != null">
+        D_PDID = #{dPdid,jdbcType=VARCHAR},
+      </if>
+      <if test="dPdidlist != null">
+        D_PDIDLIST = #{dPdidlist,jdbcType=VARCHAR},
+      </if>
+      <if test="dPdidlistcn != null">
+        D_PDIDLISTCN = #{dPdidlistcn,jdbcType=VARCHAR},
+      </if>
+      <if test="dHaschild != null">
+        D_HASCHILD = #{dHaschild,jdbcType=INTEGER},
+      </if>
+      <if test="dName != null">
+        D_NAME = #{dName,jdbcType=VARCHAR},
+      </if>
+      <if test="dEasyname != null">
+        D_EASYNAME = #{dEasyname,jdbcType=VARCHAR},
+      </if>
+      <if test="dAddress != null">
+        D_ADDRESS = #{dAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="dPostcard != null">
+        D_POSTCARD = #{dPostcard,jdbcType=VARCHAR},
+      </if>
+      <if test="dSenddutysms != null">
+        D_SENDDUTYSMS = #{dSenddutysms,jdbcType=INTEGER},
+      </if>
+      <if test="dIndex != null">
+        D_INDEX = #{dIndex,jdbcType=INTEGER},
+      </if>
+      <if test="dIsgroup != null">
+        D_ISGROUP = #{dIsgroup,jdbcType=INTEGER},
+      </if>
+      <if test="dIsstop != null">
+        D_ISSTOP = #{dIsstop,jdbcType=INTEGER},
+      </if>
+      <if test="dLevel != null">
+        D_LEVEL = #{dLevel,jdbcType=INTEGER},
+      </if>
+      <if test="dCity != null">
+        D_CITY = #{dCity,jdbcType=VARCHAR},
+      </if>
+      <if test="dDistrict != null">
+        D_DISTRICT = #{dDistrict,jdbcType=VARCHAR},
+      </if>
+      <if test="dStreet != null">
+        D_STREET = #{dStreet,jdbcType=VARCHAR},
+      </if>
+      <if test="dCommittee != null">
+        D_COMMITTEE = #{dCommittee,jdbcType=VARCHAR},
+      </if>
+      <if test="dIcon != null">
+        D_ICON = #{dIcon,jdbcType=VARCHAR},
+      </if>
+      <if test="dLogo != null">
+        D_LOGO = #{dLogo,jdbcType=VARCHAR},
+      </if>
+      <if test="dPrititle != null">
+        D_PRITITLE = #{dPrititle,jdbcType=VARCHAR},
+      </if>
+      <if test="dCreatetime != null">
+        D_CREATETIME = #{dCreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dCreatedepid != null">
+        D_CREATEDEPID = #{dCreatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="dCreateuserid != null">
+        D_CREATEUSERID = #{dCreateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="dUpdatetime != null">
+        D_UPDATETIME = #{dUpdatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dUpdatedepid != null">
+        D_UPDATEDEPID = #{dUpdatedepid,jdbcType=VARCHAR},
+      </if>
+      <if test="dUpdateuserid != null">
+        D_UPDATEUSERID = #{dUpdateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="dStoptime != null">
+        D_STOPTIME = #{dStoptime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dStopdepid != null">
+        D_STOPDEPID = #{dStopdepid,jdbcType=VARCHAR},
+      </if>
+      <if test="dStopuserid != null">
+        D_STOPUSERID = #{dStopuserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where D_ID = #{dId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ex.user.entity.OrgDepartment">
+    update ORG_DEPARTMENT
+    set DI_ID = #{diId,jdbcType=VARCHAR},
+      MEMID = #{memid,jdbcType=VARCHAR},
+      D_PDID = #{dPdid,jdbcType=VARCHAR},
+      D_PDIDLIST = #{dPdidlist,jdbcType=VARCHAR},
+      D_PDIDLISTCN = #{dPdidlistcn,jdbcType=VARCHAR},
+      D_HASCHILD = #{dHaschild,jdbcType=INTEGER},
+      D_NAME = #{dName,jdbcType=VARCHAR},
+      D_EASYNAME = #{dEasyname,jdbcType=VARCHAR},
+      D_ADDRESS = #{dAddress,jdbcType=VARCHAR},
+      D_POSTCARD = #{dPostcard,jdbcType=VARCHAR},
+      D_SENDDUTYSMS = #{dSenddutysms,jdbcType=INTEGER},
+      D_INDEX = #{dIndex,jdbcType=INTEGER},
+      D_ISGROUP = #{dIsgroup,jdbcType=INTEGER},
+      D_ISSTOP = #{dIsstop,jdbcType=INTEGER},
+      D_LEVEL = #{dLevel,jdbcType=INTEGER},
+      D_CITY = #{dCity,jdbcType=VARCHAR},
+      D_DISTRICT = #{dDistrict,jdbcType=VARCHAR},
+      D_STREET = #{dStreet,jdbcType=VARCHAR},
+      D_COMMITTEE = #{dCommittee,jdbcType=VARCHAR},
+      D_ICON = #{dIcon,jdbcType=VARCHAR},
+      D_LOGO = #{dLogo,jdbcType=VARCHAR},
+      D_PRITITLE = #{dPrititle,jdbcType=VARCHAR},
+      D_CREATETIME = #{dCreatetime,jdbcType=TIMESTAMP},
+      D_CREATEDEPID = #{dCreatedepid,jdbcType=VARCHAR},
+      D_CREATEUSERID = #{dCreateuserid,jdbcType=VARCHAR},
+      D_UPDATETIME = #{dUpdatetime,jdbcType=TIMESTAMP},
+      D_UPDATEDEPID = #{dUpdatedepid,jdbcType=VARCHAR},
+      D_UPDATEUSERID = #{dUpdateuserid,jdbcType=VARCHAR},
+      D_STOPTIME = #{dStoptime,jdbcType=TIMESTAMP},
+      D_STOPDEPID = #{dStopdepid,jdbcType=VARCHAR},
+      D_STOPUSERID = #{dStopuserid,jdbcType=VARCHAR}
+    where D_ID = #{dId,jdbcType=VARCHAR}
+  </update>
+</mapper>

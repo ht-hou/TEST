@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ex.user.mapper.OrgUserVsDepMapper">
+  <resultMap id="BaseResultMap" type="com.ex.user.entity.OrgUserVsDep">
+    <id column="UD_ID" jdbcType="VARCHAR" property="udId" />
+    <result column="D_ID" jdbcType="VARCHAR" property="dId" />
+    <result column="U_ID" jdbcType="VARCHAR" property="uId" />
+    <result column="KESHIID" jdbcType="VARCHAR" property="keshiid" />
+    <result column="UD_POSITION" jdbcType="VARCHAR" property="udPosition" />
+    <result column="DEPCONNTACTINDEX" jdbcType="INTEGER" property="depconntactindex" />
+    <result column="ROLEID" jdbcType="VARCHAR" property="roleid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    UD_ID, D_ID, U_ID, KESHIID, UD_POSITION, DEPCONNTACTINDEX, ROLEID
+  </sql>
+  <select id="selectByExample" parameterType="com.ex.user.entity.OrgUserVsDepExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ORG_USER_VS_DEP
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ORG_USER_VS_DEP
+    where UD_ID = #{udId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from ORG_USER_VS_DEP
+    where UD_ID = #{udId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ex.user.entity.OrgUserVsDepExample">
+    delete from ORG_USER_VS_DEP
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ex.user.entity.OrgUserVsDep">
+    insert into ORG_USER_VS_DEP (UD_ID, D_ID, U_ID, 
+      KESHIID, UD_POSITION, DEPCONNTACTINDEX, 
+      ROLEID)
+    values (#{udId,jdbcType=VARCHAR}, #{dId,jdbcType=VARCHAR}, #{uId,jdbcType=VARCHAR}, 
+      #{keshiid,jdbcType=VARCHAR}, #{udPosition,jdbcType=VARCHAR}, #{depconntactindex,jdbcType=INTEGER}, 
+      #{roleid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ex.user.entity.OrgUserVsDep">
+    insert into ORG_USER_VS_DEP
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="udId != null">
+        UD_ID,
+      </if>
+      <if test="dId != null">
+        D_ID,
+      </if>
+      <if test="uId != null">
+        U_ID,
+      </if>
+      <if test="keshiid != null">
+        KESHIID,
+      </if>
+      <if test="udPosition != null">
+        UD_POSITION,
+      </if>
+      <if test="depconntactindex != null">
+        DEPCONNTACTINDEX,
+      </if>
+      <if test="roleid != null">
+        ROLEID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="udId != null">
+        #{udId,jdbcType=VARCHAR},
+      </if>
+      <if test="dId != null">
+        #{dId,jdbcType=VARCHAR},
+      </if>
+      <if test="uId != null">
+        #{uId,jdbcType=VARCHAR},
+      </if>
+      <if test="keshiid != null">
+        #{keshiid,jdbcType=VARCHAR},
+      </if>
+      <if test="udPosition != null">
+        #{udPosition,jdbcType=VARCHAR},
+      </if>
+      <if test="depconntactindex != null">
+        #{depconntactindex,jdbcType=INTEGER},
+      </if>
+      <if test="roleid != null">
+        #{roleid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ex.user.entity.OrgUserVsDepExample" resultType="java.lang.Long">
+    select count(*) from ORG_USER_VS_DEP
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update ORG_USER_VS_DEP
+    <set>
+      <if test="record.udId != null">
+        UD_ID = #{record.udId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dId != null">
+        D_ID = #{record.dId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uId != null">
+        U_ID = #{record.uId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.keshiid != null">
+        KESHIID = #{record.keshiid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.udPosition != null">
+        UD_POSITION = #{record.udPosition,jdbcType=VARCHAR},
+      </if>
+      <if test="record.depconntactindex != null">
+        DEPCONNTACTINDEX = #{record.depconntactindex,jdbcType=INTEGER},
+      </if>
+      <if test="record.roleid != null">
+        ROLEID = #{record.roleid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update ORG_USER_VS_DEP
+    set UD_ID = #{record.udId,jdbcType=VARCHAR},
+      D_ID = #{record.dId,jdbcType=VARCHAR},
+      U_ID = #{record.uId,jdbcType=VARCHAR},
+      KESHIID = #{record.keshiid,jdbcType=VARCHAR},
+      UD_POSITION = #{record.udPosition,jdbcType=VARCHAR},
+      DEPCONNTACTINDEX = #{record.depconntactindex,jdbcType=INTEGER},
+      ROLEID = #{record.roleid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ex.user.entity.OrgUserVsDep">
+    update ORG_USER_VS_DEP
+    <set>
+      <if test="dId != null">
+        D_ID = #{dId,jdbcType=VARCHAR},
+      </if>
+      <if test="uId != null">
+        U_ID = #{uId,jdbcType=VARCHAR},
+      </if>
+      <if test="keshiid != null">
+        KESHIID = #{keshiid,jdbcType=VARCHAR},
+      </if>
+      <if test="udPosition != null">
+        UD_POSITION = #{udPosition,jdbcType=VARCHAR},
+      </if>
+      <if test="depconntactindex != null">
+        DEPCONNTACTINDEX = #{depconntactindex,jdbcType=INTEGER},
+      </if>
+      <if test="roleid != null">
+        ROLEID = #{roleid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where UD_ID = #{udId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ex.user.entity.OrgUserVsDep">
+    update ORG_USER_VS_DEP
+    set D_ID = #{dId,jdbcType=VARCHAR},
+      U_ID = #{uId,jdbcType=VARCHAR},
+      KESHIID = #{keshiid,jdbcType=VARCHAR},
+      UD_POSITION = #{udPosition,jdbcType=VARCHAR},
+      DEPCONNTACTINDEX = #{depconntactindex,jdbcType=INTEGER},
+      ROLEID = #{roleid,jdbcType=VARCHAR}
+    where UD_ID = #{udId,jdbcType=VARCHAR}
+  </update>
+</mapper>
