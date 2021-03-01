@@ -14,23 +14,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-@Api("部门管理")
+
 @RestController
 @RequestMapping("/dep")
+@Api(tags = "部门管理")
 public class DepController {
 
     @Resource
     DepService depService;
 
     @GetMapping("/getAll")
-    @ApiOperation(value = "获取部门列表",notes = "获取部门列表",httpMethod = "GET")
+    @ApiOperation(value = "获取部门列表", notes = "获取部门列表", httpMethod = "GET")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum",value = "页码",defaultValue = "1"),
-            @ApiImplicitParam(name = "pageSize",value = "分页数",defaultValue = "10")
+            @ApiImplicitParam(name = "pageNum", value = "页码", defaultValue = "1"),
+            @ApiImplicitParam(name = "pageSize", value = "分页数", defaultValue = "10")
     })
-    public ResultData getAll(@RequestParam(defaultValue = "1") int pageNum, @RequestParam(defaultValue = "10") int pageSize){
+    public ResultData getAll(@RequestParam(defaultValue = "1") int pageNum, @RequestParam(defaultValue = "10") int pageSize) {
 
         PageInfo<OrgDepartment> all = depService.getAll(pageNum, pageSize);
-        return new ResultData("200",all);
+        return new ResultData("200", all);
     }
 }

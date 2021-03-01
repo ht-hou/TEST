@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+
 @Service
 public class DepServiceImpl implements DepService {
 
@@ -17,9 +18,8 @@ public class DepServiceImpl implements DepService {
 
     @Override
     public PageInfo<OrgDepartment> getAll(int pageNum, int pageSize) {
-        PageHelper.startPage(pageNum,pageSize);
+        PageHelper.startPage(pageNum, pageSize);
         List<OrgDepartment> orgDepartments = orgDepartmentMapper.selectByExample(null);
-        PageInfo<OrgDepartment> pageInfo = new PageInfo<>(orgDepartments);
-        return pageInfo;
+        return new PageInfo<>(orgDepartments);
     }
 }
