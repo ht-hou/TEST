@@ -4,6 +4,7 @@ import com.ex.user.Service.DepService;
 import com.ex.user.entity.DTO.ResultData;
 import com.ex.user.entity.OrgDepartment;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-
+@Api("部门管理")
 @RestController
 @RequestMapping("/dep")
 public class DepController {
