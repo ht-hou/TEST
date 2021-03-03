@@ -9,4 +9,6 @@ public interface YHService {
     List<TResourceData> setAll();
 
     List<TResourceData> getAll();
+
+    TResourceData getOne(String rdid);
 }

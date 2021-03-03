@@ -17,24 +17,46 @@ public class YHServiceImpl implements YHService {
     @Resource
     private YHMapper yhMapper;
 
-    private String redisKey="AllResource";
+    private String redisKey = "AllResource";
 
     @Override
     public List<TResourceData> setAll() {
         List<TResourceData> resourceData = yhMapper.getAll();
-        redisTemplate.opsForValue().set(redisKey,resourceData);
+        for (TResourceData tResourceData :
+                resourceData) {
+            redisTemplate.opsForValue().set(tResourceData.getRdId(), tResourceData);
+        }
+        redisTemplate.opsForValue().set(redisKey, resourceData);
         return resourceData;
     }
 
     @Override
     public List<TResourceData> getAll() {
-        if(redisTemplate.hasKey(redisKey)){
-          return   (List<TResourceData>) redisTemplate.opsForValue().get(redisKey);
-        }else {
-            return  setAll();
+        if (redisTemplate.hasKey(redisKey)) {
+            return (List<TResourceData>) redisTemplate.opsForValue().get(redisKey);
+        } else {
+            return setAll();
         }
 
     }
 
+    @Override
+    public TResourceData getOne(String rdid) {
+
+        if (redisTemplate.hasKey(rdid)){
+            return (TResourceData) redisTemplate.opsForValue().get(rdid);
+        } else{
+            return setOne(rdid);
+        }
+
+    }
+
+    public TResourceData setOne(String rdid) {
+        TResourceData tResourceData = yhMapper.getOne(rdid);
+        redisTemplate.opsForValue().set(tResourceData.getRdId(), tResourceData);
+
+
+        return tResourceData;
+    }
 
 }

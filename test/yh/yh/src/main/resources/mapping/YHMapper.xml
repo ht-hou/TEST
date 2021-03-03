@@ -21,5 +21,10 @@
          select rd_id,rc_id,streetcode,createuserid,createusername,createdep,updateuserid,
          rd_address,fromdep,committeecode,keyword,temp_id,houseid from T_RESOURCE_DATA
     </select>
-
+    <!--TResourceData getOne();-->
+    <select id="getOne" parameterType="java.lang.String" resultMap="getUserDb">
+        select rd_id,rc_id,streetcode,createuserid,createusername,createdep,updateuserid,
+         rd_address,fromdep,committeecode,keyword,temp_id,houseid from T_RESOURCE_DATA
+         where rd_id = #{rdid}
+    </select>
 </mapper>

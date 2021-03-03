@@ -14,8 +14,8 @@ public class YHController {
     @Resource
     YHService yhService;
 
-    @GetMapping("test")
-    public Object test() {
+    @GetMapping("getAll")
+    public Object getAll() {
         List<TResourceData> all = yhService.getAll();
         System.out.println(all.get(0).getCreateUserName());
         return all;
