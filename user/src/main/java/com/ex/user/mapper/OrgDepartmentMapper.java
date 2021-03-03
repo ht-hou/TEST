@@ -29,4 +29,6 @@ public interface OrgDepartmentMapper {
     int updateByPrimaryKeySelective(OrgDepartment record);
 
     int updateByPrimaryKey(OrgDepartment record);
+
+    List<OrgDepartment> selectDepartment();
 }

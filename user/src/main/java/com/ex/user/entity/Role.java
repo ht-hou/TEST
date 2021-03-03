@@ -1,11 +1,13 @@
 package com.ex.user.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 import java.util.Date;
 @ApiModel("角色")
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Role implements Serializable {
     @ApiModelProperty("角色编码")
     private String roleid;

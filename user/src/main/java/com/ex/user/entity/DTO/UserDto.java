@@ -4,6 +4,7 @@ import com.ex.user.entity.OrgDepartment;
 import com.ex.user.entity.OrgUser;
 import com.ex.user.entity.OrgUserVsDep;
 import com.ex.user.entity.Role;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -16,13 +17,14 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 //@ApiModel("编辑用户专用")
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class UserDto implements Serializable {
-   // @ApiModelProperty("用户信息")
+//    @ApiModelProperty("用户信息")
     private OrgUser user;
-  //  @ApiModelProperty("用户所处部门信息")
+//    @ApiModelProperty("用户所处部门信息")
     private OrgDepartment department;
- //   @ApiModelProperty("用户角色信息")
+//    @ApiModelProperty("用户角色信息")
     private Role role;
- //   @ApiModelProperty("用户和部门关联信息")
+//    @ApiModelProperty("用户和部门关联信息")
     private OrgUserVsDep orgUserVsDep;
 }

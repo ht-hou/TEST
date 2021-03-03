@@ -22,4 +22,10 @@ public class DepServiceImpl implements DepService {
         List<OrgDepartment> orgDepartments = orgDepartmentMapper.selectByExample(null);
         return new PageInfo<>(orgDepartments);
     }
+
+    @Override
+    public List<OrgDepartment> getAll() {
+        List<OrgDepartment> orgDepartments = orgDepartmentMapper.selectDepartment();
+        return orgDepartments;
+    }
 }

@@ -1,11 +1,13 @@
 package com.ex.user.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 
 @ApiModel("用户关联部门")
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class OrgUserVsDep implements Serializable {
     @ApiModelProperty("用户关联部门编码")
     private String udId;

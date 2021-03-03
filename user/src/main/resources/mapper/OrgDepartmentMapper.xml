@@ -635,4 +635,8 @@
       D_STOPUSERID = #{dStopuserid,jdbcType=VARCHAR}
     where D_ID = #{dId,jdbcType=VARCHAR}
   </update>
+  <!--List<OrgDepartment> selectDepartment();-->
+  <select id="selectDepartment" resultMap="BaseResultMap">
+     select D_ID,D_PDID, D_NAME, D_EASYNAME from ORG_DEPARTMENT
+  </select>
 </mapper>

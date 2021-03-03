@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @RequestMapping("/dep")
@@ -25,13 +26,14 @@ public class DepController {
 
     @GetMapping("/getAll")
     @ApiOperation(value = "获取部门列表", notes = "获取部门列表", httpMethod = "GET")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum", value = "页码", defaultValue = "1"),
-            @ApiImplicitParam(name = "pageSize", value = "分页数", defaultValue = "10")
-    })
-    public ResultData getAll(@RequestParam(defaultValue = "1") int pageNum, @RequestParam(defaultValue = "10") int pageSize) {
+//    @ApiImplicitParams({
+//            @ApiImplicitParam(name = "pageNum", value = "页码", defaultValue = "1"),
+//            @ApiImplicitParam(name = "pageSize", value = "分页数", defaultValue = "10")
+//    })
+    public ResultData getAll(/*@RequestParam(defaultValue = "1") int pageNum, @RequestParam(defaultValue = "10") int pageSize*/) {
 
-        PageInfo<OrgDepartment> all = depService.getAll(pageNum, pageSize);
+        //PageInfo<OrgDepartment> all = depService.getAll(pageNum, pageSize);
+        List<OrgDepartment> all = depService.getAll();
         return new ResultData("200", all);
     }
 }
