@@ -20,5 +20,10 @@ public class YHController {
         System.out.println(all.get(0).getCreateUserName());
         return all;
     }
+    @GetMapping("getOne")
+    public TResourceData getOne(String rdid){
+        TResourceData tResourceData = yhService.getOne(rdid);
 
+        return tResourceData;
+    }
 }
