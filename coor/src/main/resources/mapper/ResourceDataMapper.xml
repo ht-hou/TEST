@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ex.dameng.mapper.ResourceDataMapper">
+  <resultMap id="BaseResultMap" type="ResourceData">
+    <id column="RESOURCEID" jdbcType="VARCHAR" property="resourceid" />
+    <result column="RESCATEID" jdbcType="VARCHAR" property="rescateid" />
+    <result column="RESOURCENAME" jdbcType="VARCHAR" property="resourcename" />
+    <result column="RESOURCEADDRESS" jdbcType="VARCHAR" property="resourceaddress" />
+    <result column="COUNT" jdbcType="INTEGER" property="count" />
+    <result column="FROMUNIT" jdbcType="VARCHAR" property="fromunit" />
+    <result column="GOODAT" jdbcType="VARCHAR" property="goodat" />
+    <result column="PEOPLENUM" jdbcType="INTEGER" property="peoplenum" />
+    <result column="HOLDNUM" jdbcType="INTEGER" property="holdnum" />
+    <result column="CONTACTS" jdbcType="VARCHAR" property="contacts" />
+    <result column="TELPHONE" jdbcType="VARCHAR" property="telphone" />
+    <result column="AREANUM" jdbcType="VARCHAR" property="areanum" />
+    <result column="SUBNUM" jdbcType="VARCHAR" property="subnum" />
+    <result column="MOBILEPHONE" jdbcType="VARCHAR" property="mobilephone" />
+    <result column="CITYCODE" jdbcType="VARCHAR" property="citycode" />
+    <result column="DISTRICTCODE" jdbcType="VARCHAR" property="districtcode" />
+    <result column="STREETCODE" jdbcType="VARCHAR" property="streetcode" />
+    <result column="COMMITTEECODE" jdbcType="VARCHAR" property="committeecode" />
+    <result column="CREATEUSERID" jdbcType="VARCHAR" property="createuserid" />
+    <result column="CREATETIME" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="CREATEDEP" jdbcType="VARCHAR" property="createdep" />
+    <result column="UPDATEUSERID" jdbcType="VARCHAR" property="updateuserid" />
+    <result column="UPDATETIME" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="UPDATEDEP" jdbcType="VARCHAR" property="updatedep" />
+    <result column="ISIMPORT" jdbcType="INTEGER" property="isimport" />
+    <result column="ADDRESSFAIL" jdbcType="INTEGER" property="addressfail" />
+    <result column="F1" jdbcType="VARCHAR" property="f1" />
+    <result column="F2" jdbcType="VARCHAR" property="f2" />
+    <result column="F3" jdbcType="VARCHAR" property="f3" />
+    <result column="F4" jdbcType="VARCHAR" property="f4" />
+    <result column="F5" jdbcType="VARCHAR" property="f5" />
+    <result column="F6" jdbcType="VARCHAR" property="f6" />
+    <result column="F7" jdbcType="VARCHAR" property="f7" />
+    <result column="F8" jdbcType="VARCHAR" property="f8" />
+    <result column="F9" jdbcType="VARCHAR" property="f9" />
+    <result column="F10" jdbcType="VARCHAR" property="f10" />
+    <result column="F11" jdbcType="VARCHAR" property="f11" />
+    <result column="F12" jdbcType="VARCHAR" property="f12" />
+    <result column="F13" jdbcType="VARCHAR" property="f13" />
+    <result column="F14" jdbcType="VARCHAR" property="f14" />
+    <result column="F15" jdbcType="VARCHAR" property="f15" />
+    <result column="F16" jdbcType="VARCHAR" property="f16" />
+    <result column="F17" jdbcType="VARCHAR" property="f17" />
+    <result column="F18" jdbcType="VARCHAR" property="f18" />
+    <result column="F19" jdbcType="VARCHAR" property="f19" />
+    <result column="F20" jdbcType="VARCHAR" property="f20" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    RESOURCEID, RESCATEID, RESOURCENAME, RESOURCEADDRESS, COUNT, FROMUNIT, GOODAT, PEOPLENUM, 
+    HOLDNUM, CONTACTS, TELPHONE, AREANUM, SUBNUM, MOBILEPHONE, CITYCODE, DISTRICTCODE, 
+    STREETCODE, COMMITTEECODE, CREATEUSERID, CREATETIME, CREATEDEP, UPDATEUSERID, UPDATETIME, 
+    UPDATEDEP, ISIMPORT, ADDRESSFAIL, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, 
+    F13, F14, F15, F16, F17, F18, F19, F20
+  </sql>
+  <select id="selectByExample" parameterType="ResourceDataExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from RESOURCE_DATA
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from RESOURCE_DATA
+    where RESOURCEID = #{resourceid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from RESOURCE_DATA
+    where RESOURCEID = #{resourceid,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="ResourceDataExample">
+    delete from RESOURCE_DATA
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="ResourceData">
+    insert into RESOURCE_DATA (RESOURCEID, RESCATEID, RESOURCENAME, 
+      RESOURCEADDRESS, COUNT, FROMUNIT, 
+      GOODAT, PEOPLENUM, HOLDNUM, 
+      CONTACTS, TELPHONE, AREANUM, 
+      SUBNUM, MOBILEPHONE, CITYCODE, 
+      DISTRICTCODE, STREETCODE, COMMITTEECODE, 
+      CREATEUSERID, CREATETIME, CREATEDEP, 
+      UPDATEUSERID, UPDATETIME, UPDATEDEP, 
+      ISIMPORT, ADDRESSFAIL, F1, 
+      F2, F3, F4, F5, 
+      F6, F7, F8, F9, 
+      F10, F11, F12, F13, 
+      F14, F15, F16, F17, 
+      F18, F19, F20)
+    values (#{resourceid,jdbcType=VARCHAR}, #{rescateid,jdbcType=VARCHAR}, #{resourcename,jdbcType=VARCHAR}, 
+      #{resourceaddress,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, #{fromunit,jdbcType=VARCHAR}, 
+      #{goodat,jdbcType=VARCHAR}, #{peoplenum,jdbcType=INTEGER}, #{holdnum,jdbcType=INTEGER}, 
+      #{contacts,jdbcType=VARCHAR}, #{telphone,jdbcType=VARCHAR}, #{areanum,jdbcType=VARCHAR}, 
+      #{subnum,jdbcType=VARCHAR}, #{mobilephone,jdbcType=VARCHAR}, #{citycode,jdbcType=VARCHAR}, 
+      #{districtcode,jdbcType=VARCHAR}, #{streetcode,jdbcType=VARCHAR}, #{committeecode,jdbcType=VARCHAR}, 
+      #{createuserid,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{createdep,jdbcType=VARCHAR}, 
+      #{updateuserid,jdbcType=VARCHAR}, #{updatetime,jdbcType=TIMESTAMP}, #{updatedep,jdbcType=VARCHAR}, 
+      #{isimport,jdbcType=INTEGER}, #{addressfail,jdbcType=INTEGER}, #{f1,jdbcType=VARCHAR}, 
+      #{f2,jdbcType=VARCHAR}, #{f3,jdbcType=VARCHAR}, #{f4,jdbcType=VARCHAR}, #{f5,jdbcType=VARCHAR}, 
+      #{f6,jdbcType=VARCHAR}, #{f7,jdbcType=VARCHAR}, #{f8,jdbcType=VARCHAR}, #{f9,jdbcType=VARCHAR}, 
+      #{f10,jdbcType=VARCHAR}, #{f11,jdbcType=VARCHAR}, #{f12,jdbcType=VARCHAR}, #{f13,jdbcType=VARCHAR}, 
+      #{f14,jdbcType=VARCHAR}, #{f15,jdbcType=VARCHAR}, #{f16,jdbcType=VARCHAR}, #{f17,jdbcType=VARCHAR}, 
+      #{f18,jdbcType=VARCHAR}, #{f19,jdbcType=VARCHAR}, #{f20,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="ResourceData">
+    insert into RESOURCE_DATA
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="resourceid != null">
+        RESOURCEID,
+      </if>
+      <if test="rescateid != null">
+        RESCATEID,
+      </if>
+      <if test="resourcename != null">
+        RESOURCENAME,
+      </if>
+      <if test="resourceaddress != null">
+        RESOURCEADDRESS,
+      </if>
+      <if test="count != null">
+        COUNT,
+      </if>
+      <if test="fromunit != null">
+        FROMUNIT,
+      </if>
+      <if test="goodat != null">
+        GOODAT,
+      </if>
+      <if test="peoplenum != null">
+        PEOPLENUM,
+      </if>
+      <if test="holdnum != null">
+        HOLDNUM,
+      </if>
+      <if test="contacts != null">
+        CONTACTS,
+      </if>
+      <if test="telphone != null">
+        TELPHONE,
+      </if>
+      <if test="areanum != null">
+        AREANUM,
+      </if>
+      <if test="subnum != null">
+        SUBNUM,
+      </if>
+      <if test="mobilephone != null">
+        MOBILEPHONE,
+      </if>
+      <if test="citycode != null">
+        CITYCODE,
+      </if>
+      <if test="districtcode != null">
+        DISTRICTCODE,
+      </if>
+      <if test="streetcode != null">
+        STREETCODE,
+      </if>
+      <if test="committeecode != null">
+        COMMITTEECODE,
+      </if>
+      <if test="createuserid != null">
+        CREATEUSERID,
+      </if>
+      <if test="createtime != null">
+        CREATETIME,
+      </if>
+      <if test="createdep != null">
+        CREATEDEP,
+      </if>
+      <if test="updateuserid != null">
+        UPDATEUSERID,
+      </if>
+      <if test="updatetime != null">
+        UPDATETIME,
+      </if>
+      <if test="updatedep != null">
+        UPDATEDEP,
+      </if>
+      <if test="isimport != null">
+        ISIMPORT,
+      </if>
+      <if test="addressfail != null">
+        ADDRESSFAIL,
+      </if>
+      <if test="f1 != null">
+        F1,
+      </if>
+      <if test="f2 != null">
+        F2,
+      </if>
+      <if test="f3 != null">
+        F3,
+      </if>
+      <if test="f4 != null">
+        F4,
+      </if>
+      <if test="f5 != null">
+        F5,
+      </if>
+      <if test="f6 != null">
+        F6,
+      </if>
+      <if test="f7 != null">
+        F7,
+      </if>
+      <if test="f8 != null">
+        F8,
+      </if>
+      <if test="f9 != null">
+        F9,
+      </if>
+      <if test="f10 != null">
+        F10,
+      </if>
+      <if test="f11 != null">
+        F11,
+      </if>
+      <if test="f12 != null">
+        F12,
+      </if>
+      <if test="f13 != null">
+        F13,
+      </if>
+      <if test="f14 != null">
+        F14,
+      </if>
+      <if test="f15 != null">
+        F15,
+      </if>
+      <if test="f16 != null">
+        F16,
+      </if>
+      <if test="f17 != null">
+        F17,
+      </if>
+      <if test="f18 != null">
+        F18,
+      </if>
+      <if test="f19 != null">
+        F19,
+      </if>
+      <if test="f20 != null">
+        F20,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="resourceid != null">
+        #{resourceid,jdbcType=VARCHAR},
+      </if>
+      <if test="rescateid != null">
+        #{rescateid,jdbcType=VARCHAR},
+      </if>
+      <if test="resourcename != null">
+        #{resourcename,jdbcType=VARCHAR},
+      </if>
+      <if test="resourceaddress != null">
+        #{resourceaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="fromunit != null">
+        #{fromunit,jdbcType=VARCHAR},
+      </if>
+      <if test="goodat != null">
+        #{goodat,jdbcType=VARCHAR},
+      </if>
+      <if test="peoplenum != null">
+        #{peoplenum,jdbcType=INTEGER},
+      </if>
+      <if test="holdnum != null">
+        #{holdnum,jdbcType=INTEGER},
+      </if>
+      <if test="contacts != null">
+        #{contacts,jdbcType=VARCHAR},
+      </if>
+      <if test="telphone != null">
+        #{telphone,jdbcType=VARCHAR},
+      </if>
+      <if test="areanum != null">
+        #{areanum,jdbcType=VARCHAR},
+      </if>
+      <if test="subnum != null">
+        #{subnum,jdbcType=VARCHAR},
+      </if>
+      <if test="mobilephone != null">
+        #{mobilephone,jdbcType=VARCHAR},
+      </if>
+      <if test="citycode != null">
+        #{citycode,jdbcType=VARCHAR},
+      </if>
+      <if test="districtcode != null">
+        #{districtcode,jdbcType=VARCHAR},
+      </if>
+      <if test="streetcode != null">
+        #{streetcode,jdbcType=VARCHAR},
+      </if>
+      <if test="committeecode != null">
+        #{committeecode,jdbcType=VARCHAR},
+      </if>
+      <if test="createuserid != null">
+        #{createuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createdep != null">
+        #{createdep,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuserid != null">
+        #{updateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedep != null">
+        #{updatedep,jdbcType=VARCHAR},
+      </if>
+      <if test="isimport != null">
+        #{isimport,jdbcType=INTEGER},
+      </if>
+      <if test="addressfail != null">
+        #{addressfail,jdbcType=INTEGER},
+      </if>
+      <if test="f1 != null">
+        #{f1,jdbcType=VARCHAR},
+      </if>
+      <if test="f2 != null">
+        #{f2,jdbcType=VARCHAR},
+      </if>
+      <if test="f3 != null">
+        #{f3,jdbcType=VARCHAR},
+      </if>
+      <if test="f4 != null">
+        #{f4,jdbcType=VARCHAR},
+      </if>
+      <if test="f5 != null">
+        #{f5,jdbcType=VARCHAR},
+      </if>
+      <if test="f6 != null">
+        #{f6,jdbcType=VARCHAR},
+      </if>
+      <if test="f7 != null">
+        #{f7,jdbcType=VARCHAR},
+      </if>
+      <if test="f8 != null">
+        #{f8,jdbcType=VARCHAR},
+      </if>
+      <if test="f9 != null">
+        #{f9,jdbcType=VARCHAR},
+      </if>
+      <if test="f10 != null">
+        #{f10,jdbcType=VARCHAR},
+      </if>
+      <if test="f11 != null">
+        #{f11,jdbcType=VARCHAR},
+      </if>
+      <if test="f12 != null">
+        #{f12,jdbcType=VARCHAR},
+      </if>
+      <if test="f13 != null">
+        #{f13,jdbcType=VARCHAR},
+      </if>
+      <if test="f14 != null">
+        #{f14,jdbcType=VARCHAR},
+      </if>
+      <if test="f15 != null">
+        #{f15,jdbcType=VARCHAR},
+      </if>
+      <if test="f16 != null">
+        #{f16,jdbcType=VARCHAR},
+      </if>
+      <if test="f17 != null">
+        #{f17,jdbcType=VARCHAR},
+      </if>
+      <if test="f18 != null">
+        #{f18,jdbcType=VARCHAR},
+      </if>
+      <if test="f19 != null">
+        #{f19,jdbcType=VARCHAR},
+      </if>
+      <if test="f20 != null">
+        #{f20,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="ResourceDataExample" resultType="java.lang.Long">
+    select count(*) from RESOURCE_DATA
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update RESOURCE_DATA
+    <set>
+      <if test="record.resourceid != null">
+        RESOURCEID = #{record.resourceid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rescateid != null">
+        RESCATEID = #{record.rescateid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.resourcename != null">
+        RESOURCENAME = #{record.resourcename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.resourceaddress != null">
+        RESOURCEADDRESS = #{record.resourceaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.count != null">
+        COUNT = #{record.count,jdbcType=INTEGER},
+      </if>
+      <if test="record.fromunit != null">
+        FROMUNIT = #{record.fromunit,jdbcType=VARCHAR},
+      </if>
+      <if test="record.goodat != null">
+        GOODAT = #{record.goodat,jdbcType=VARCHAR},
+      </if>
+      <if test="record.peoplenum != null">
+        PEOPLENUM = #{record.peoplenum,jdbcType=INTEGER},
+      </if>
+      <if test="record.holdnum != null">
+        HOLDNUM = #{record.holdnum,jdbcType=INTEGER},
+      </if>
+      <if test="record.contacts != null">
+        CONTACTS = #{record.contacts,jdbcType=VARCHAR},
+      </if>
+      <if test="record.telphone != null">
+        TELPHONE = #{record.telphone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.areanum != null">
+        AREANUM = #{record.areanum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subnum != null">
+        SUBNUM = #{record.subnum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mobilephone != null">
+        MOBILEPHONE = #{record.mobilephone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.citycode != null">
+        CITYCODE = #{record.citycode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.districtcode != null">
+        DISTRICTCODE = #{record.districtcode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.streetcode != null">
+        STREETCODE = #{record.streetcode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.committeecode != null">
+        COMMITTEECODE = #{record.committeecode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createuserid != null">
+        CREATEUSERID = #{record.createuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createtime != null">
+        CREATETIME = #{record.createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.createdep != null">
+        CREATEDEP = #{record.createdep,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateuserid != null">
+        UPDATEUSERID = #{record.updateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updatetime != null">
+        UPDATETIME = #{record.updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updatedep != null">
+        UPDATEDEP = #{record.updatedep,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isimport != null">
+        ISIMPORT = #{record.isimport,jdbcType=INTEGER},
+      </if>
+      <if test="record.addressfail != null">
+        ADDRESSFAIL = #{record.addressfail,jdbcType=INTEGER},
+      </if>
+      <if test="record.f1 != null">
+        F1 = #{record.f1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f2 != null">
+        F2 = #{record.f2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f3 != null">
+        F3 = #{record.f3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f4 != null">
+        F4 = #{record.f4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f5 != null">
+        F5 = #{record.f5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f6 != null">
+        F6 = #{record.f6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f7 != null">
+        F7 = #{record.f7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f8 != null">
+        F8 = #{record.f8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f9 != null">
+        F9 = #{record.f9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f10 != null">
+        F10 = #{record.f10,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f11 != null">
+        F11 = #{record.f11,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f12 != null">
+        F12 = #{record.f12,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f13 != null">
+        F13 = #{record.f13,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f14 != null">
+        F14 = #{record.f14,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f15 != null">
+        F15 = #{record.f15,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f16 != null">
+        F16 = #{record.f16,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f17 != null">
+        F17 = #{record.f17,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f18 != null">
+        F18 = #{record.f18,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f19 != null">
+        F19 = #{record.f19,jdbcType=VARCHAR},
+      </if>
+      <if test="record.f20 != null">
+        F20 = #{record.f20,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update RESOURCE_DATA
+    set RESOURCEID = #{record.resourceid,jdbcType=VARCHAR},
+      RESCATEID = #{record.rescateid,jdbcType=VARCHAR},
+      RESOURCENAME = #{record.resourcename,jdbcType=VARCHAR},
+      RESOURCEADDRESS = #{record.resourceaddress,jdbcType=VARCHAR},
+      COUNT = #{record.count,jdbcType=INTEGER},
+      FROMUNIT = #{record.fromunit,jdbcType=VARCHAR},
+      GOODAT = #{record.goodat,jdbcType=VARCHAR},
+      PEOPLENUM = #{record.peoplenum,jdbcType=INTEGER},
+      HOLDNUM = #{record.holdnum,jdbcType=INTEGER},
+      CONTACTS = #{record.contacts,jdbcType=VARCHAR},
+      TELPHONE = #{record.telphone,jdbcType=VARCHAR},
+      AREANUM = #{record.areanum,jdbcType=VARCHAR},
+      SUBNUM = #{record.subnum,jdbcType=VARCHAR},
+      MOBILEPHONE = #{record.mobilephone,jdbcType=VARCHAR},
+      CITYCODE = #{record.citycode,jdbcType=VARCHAR},
+      DISTRICTCODE = #{record.districtcode,jdbcType=VARCHAR},
+      STREETCODE = #{record.streetcode,jdbcType=VARCHAR},
+      COMMITTEECODE = #{record.committeecode,jdbcType=VARCHAR},
+      CREATEUSERID = #{record.createuserid,jdbcType=VARCHAR},
+      CREATETIME = #{record.createtime,jdbcType=TIMESTAMP},
+      CREATEDEP = #{record.createdep,jdbcType=VARCHAR},
+      UPDATEUSERID = #{record.updateuserid,jdbcType=VARCHAR},
+      UPDATETIME = #{record.updatetime,jdbcType=TIMESTAMP},
+      UPDATEDEP = #{record.updatedep,jdbcType=VARCHAR},
+      ISIMPORT = #{record.isimport,jdbcType=INTEGER},
+      ADDRESSFAIL = #{record.addressfail,jdbcType=INTEGER},
+      F1 = #{record.f1,jdbcType=VARCHAR},
+      F2 = #{record.f2,jdbcType=VARCHAR},
+      F3 = #{record.f3,jdbcType=VARCHAR},
+      F4 = #{record.f4,jdbcType=VARCHAR},
+      F5 = #{record.f5,jdbcType=VARCHAR},
+      F6 = #{record.f6,jdbcType=VARCHAR},
+      F7 = #{record.f7,jdbcType=VARCHAR},
+      F8 = #{record.f8,jdbcType=VARCHAR},
+      F9 = #{record.f9,jdbcType=VARCHAR},
+      F10 = #{record.f10,jdbcType=VARCHAR},
+      F11 = #{record.f11,jdbcType=VARCHAR},
+      F12 = #{record.f12,jdbcType=VARCHAR},
+      F13 = #{record.f13,jdbcType=VARCHAR},
+      F14 = #{record.f14,jdbcType=VARCHAR},
+      F15 = #{record.f15,jdbcType=VARCHAR},
+      F16 = #{record.f16,jdbcType=VARCHAR},
+      F17 = #{record.f17,jdbcType=VARCHAR},
+      F18 = #{record.f18,jdbcType=VARCHAR},
+      F19 = #{record.f19,jdbcType=VARCHAR},
+      F20 = #{record.f20,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="ResourceData">
+    update RESOURCE_DATA
+    <set>
+      <if test="rescateid != null">
+        RESCATEID = #{rescateid,jdbcType=VARCHAR},
+      </if>
+      <if test="resourcename != null">
+        RESOURCENAME = #{resourcename,jdbcType=VARCHAR},
+      </if>
+      <if test="resourceaddress != null">
+        RESOURCEADDRESS = #{resourceaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        COUNT = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="fromunit != null">
+        FROMUNIT = #{fromunit,jdbcType=VARCHAR},
+      </if>
+      <if test="goodat != null">
+        GOODAT = #{goodat,jdbcType=VARCHAR},
+      </if>
+      <if test="peoplenum != null">
+        PEOPLENUM = #{peoplenum,jdbcType=INTEGER},
+      </if>
+      <if test="holdnum != null">
+        HOLDNUM = #{holdnum,jdbcType=INTEGER},
+      </if>
+      <if test="contacts != null">
+        CONTACTS = #{contacts,jdbcType=VARCHAR},
+      </if>
+      <if test="telphone != null">
+        TELPHONE = #{telphone,jdbcType=VARCHAR},
+      </if>
+      <if test="areanum != null">
+        AREANUM = #{areanum,jdbcType=VARCHAR},
+      </if>
+      <if test="subnum != null">
+        SUBNUM = #{subnum,jdbcType=VARCHAR},
+      </if>
+      <if test="mobilephone != null">
+        MOBILEPHONE = #{mobilephone,jdbcType=VARCHAR},
+      </if>
+      <if test="citycode != null">
+        CITYCODE = #{citycode,jdbcType=VARCHAR},
+      </if>
+      <if test="districtcode != null">
+        DISTRICTCODE = #{districtcode,jdbcType=VARCHAR},
+      </if>
+      <if test="streetcode != null">
+        STREETCODE = #{streetcode,jdbcType=VARCHAR},
+      </if>
+      <if test="committeecode != null">
+        COMMITTEECODE = #{committeecode,jdbcType=VARCHAR},
+      </if>
+      <if test="createuserid != null">
+        CREATEUSERID = #{createuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createdep != null">
+        CREATEDEP = #{createdep,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuserid != null">
+        UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        UPDATETIME = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedep != null">
+        UPDATEDEP = #{updatedep,jdbcType=VARCHAR},
+      </if>
+      <if test="isimport != null">
+        ISIMPORT = #{isimport,jdbcType=INTEGER},
+      </if>
+      <if test="addressfail != null">
+        ADDRESSFAIL = #{addressfail,jdbcType=INTEGER},
+      </if>
+      <if test="f1 != null">
+        F1 = #{f1,jdbcType=VARCHAR},
+      </if>
+      <if test="f2 != null">
+        F2 = #{f2,jdbcType=VARCHAR},
+      </if>
+      <if test="f3 != null">
+        F3 = #{f3,jdbcType=VARCHAR},
+      </if>
+      <if test="f4 != null">
+        F4 = #{f4,jdbcType=VARCHAR},
+      </if>
+      <if test="f5 != null">
+        F5 = #{f5,jdbcType=VARCHAR},
+      </if>
+      <if test="f6 != null">
+        F6 = #{f6,jdbcType=VARCHAR},
+      </if>
+      <if test="f7 != null">
+        F7 = #{f7,jdbcType=VARCHAR},
+      </if>
+      <if test="f8 != null">
+        F8 = #{f8,jdbcType=VARCHAR},
+      </if>
+      <if test="f9 != null">
+        F9 = #{f9,jdbcType=VARCHAR},
+      </if>
+      <if test="f10 != null">
+        F10 = #{f10,jdbcType=VARCHAR},
+      </if>
+      <if test="f11 != null">
+        F11 = #{f11,jdbcType=VARCHAR},
+      </if>
+      <if test="f12 != null">
+        F12 = #{f12,jdbcType=VARCHAR},
+      </if>
+      <if test="f13 != null">
+        F13 = #{f13,jdbcType=VARCHAR},
+      </if>
+      <if test="f14 != null">
+        F14 = #{f14,jdbcType=VARCHAR},
+      </if>
+      <if test="f15 != null">
+        F15 = #{f15,jdbcType=VARCHAR},
+      </if>
+      <if test="f16 != null">
+        F16 = #{f16,jdbcType=VARCHAR},
+      </if>
+      <if test="f17 != null">
+        F17 = #{f17,jdbcType=VARCHAR},
+      </if>
+      <if test="f18 != null">
+        F18 = #{f18,jdbcType=VARCHAR},
+      </if>
+      <if test="f19 != null">
+        F19 = #{f19,jdbcType=VARCHAR},
+      </if>
+      <if test="f20 != null">
+        F20 = #{f20,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where RESOURCEID = #{resourceid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="ResourceData">
+    update RESOURCE_DATA
+    set RESCATEID = #{rescateid,jdbcType=VARCHAR},
+      RESOURCENAME = #{resourcename,jdbcType=VARCHAR},
+      RESOURCEADDRESS = #{resourceaddress,jdbcType=VARCHAR},
+      COUNT = #{count,jdbcType=INTEGER},
+      FROMUNIT = #{fromunit,jdbcType=VARCHAR},
+      GOODAT = #{goodat,jdbcType=VARCHAR},
+      PEOPLENUM = #{peoplenum,jdbcType=INTEGER},
+      HOLDNUM = #{holdnum,jdbcType=INTEGER},
+      CONTACTS = #{contacts,jdbcType=VARCHAR},
+      TELPHONE = #{telphone,jdbcType=VARCHAR},
+      AREANUM = #{areanum,jdbcType=VARCHAR},
+      SUBNUM = #{subnum,jdbcType=VARCHAR},
+      MOBILEPHONE = #{mobilephone,jdbcType=VARCHAR},
+      CITYCODE = #{citycode,jdbcType=VARCHAR},
+      DISTRICTCODE = #{districtcode,jdbcType=VARCHAR},
+      STREETCODE = #{streetcode,jdbcType=VARCHAR},
+      COMMITTEECODE = #{committeecode,jdbcType=VARCHAR},
+      CREATEUSERID = #{createuserid,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      CREATEDEP = #{createdep,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
+      UPDATETIME = #{updatetime,jdbcType=TIMESTAMP},
+      UPDATEDEP = #{updatedep,jdbcType=VARCHAR},
+      ISIMPORT = #{isimport,jdbcType=INTEGER},
+      ADDRESSFAIL = #{addressfail,jdbcType=INTEGER},
+      F1 = #{f1,jdbcType=VARCHAR},
+      F2 = #{f2,jdbcType=VARCHAR},
+      F3 = #{f3,jdbcType=VARCHAR},
+      F4 = #{f4,jdbcType=VARCHAR},
+      F5 = #{f5,jdbcType=VARCHAR},
+      F6 = #{f6,jdbcType=VARCHAR},
+      F7 = #{f7,jdbcType=VARCHAR},
+      F8 = #{f8,jdbcType=VARCHAR},
+      F9 = #{f9,jdbcType=VARCHAR},
+      F10 = #{f10,jdbcType=VARCHAR},
+      F11 = #{f11,jdbcType=VARCHAR},
+      F12 = #{f12,jdbcType=VARCHAR},
+      F13 = #{f13,jdbcType=VARCHAR},
+      F14 = #{f14,jdbcType=VARCHAR},
+      F15 = #{f15,jdbcType=VARCHAR},
+      F16 = #{f16,jdbcType=VARCHAR},
+      F17 = #{f17,jdbcType=VARCHAR},
+      F18 = #{f18,jdbcType=VARCHAR},
+      F19 = #{f19,jdbcType=VARCHAR},
+      F20 = #{f20,jdbcType=VARCHAR}
+    where RESOURCEID = #{resourceid,jdbcType=VARCHAR}
+  </update>
+  <!-- List<ResourceData> selectByChengYun(ParamData paramData);
+
+    List<ResourceData> GPSAndGd(HashMap<String, Object> doubles) ;-->
+
+  <select id="selectByChengYun" parameterType="com.ex.coor.entity.pojo.ParamData" resultMap="BaseResultMap">
+    select * from  RESOURCE_DATA where RESOURCEID in (SELECT
+    *
+    FROM
+    Resource_coor
+    where
+    RESOURCE_COOR.CT_ID = '1'
+    and (((x-(#{x}))*(x-(#{x})))+((y-(#{y}))*(y-(#{y}))) &lt;=(#{raidus}*1#{raidus})))
+  </select>
+</mapper>

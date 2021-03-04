@@ -24,10 +24,10 @@ import java.util.Map;
 
 @Component
 public class HourGet {
-    static CloseableHttpClient client = HttpClientBuilder.create().build();
-    static String json = null;
-    static HttpGet httpGet = new HttpGet();
-    static CloseableHttpResponse response = null;
+    private static CloseableHttpClient client = HttpClientBuilder.create().build();
+    private static String json = null;
+    private static HttpGet httpGet = new HttpGet();
+    private static CloseableHttpResponse response = null;
     static Integer time = 0;
 
     @Resource
@@ -41,7 +41,7 @@ public class HourGet {
 
         for (City city : cities) {
             try {
-                Thread.sleep(30*1000);
+                Thread.sleep(30 * 1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -58,7 +58,7 @@ public class HourGet {
     }
 
 
-    public synchronized boolean httpGetCity(City city)
+    private synchronized boolean httpGetCity(City city)
         //  @Test
         // public void httpGet()
             throws IOException {
@@ -89,7 +89,7 @@ public class HourGet {
             json = new String(body);
             Map map = (Map) JSON.parse(json);
             String s = map.get("status").toString();
-            if("200".equals(s)){
+            if ("200".equals(s)) {
                 Map data = (Map) map.get("data");
                 toDX(data, id);
             }
@@ -107,7 +107,7 @@ public class HourGet {
         return false;
     }
 
-    public synchronized void toDX(Map data, String code) {
+    private synchronized void toDX(Map data, String code) {
         String id = code.trim();
         CityNowWeather cityNowWeather = new CityNowWeather();
         cityNowWeather.setShidu(data.get("shidu").toString());
@@ -128,8 +128,7 @@ public class HourGet {
             cityMoreWeather.setId(id);
         }
 
-            weatherService.SetWeather(cityNowWeather, cityMoreWeathers);
-
+        weatherService.SetWeather(cityNowWeather, cityMoreWeathers);
 
     }
 
