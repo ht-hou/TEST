@@ -1,206 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ex.dameng.mapper.ResourceCoorMapper">
-  <resultMap id="BaseResultMap" type="ResourceCoor">
-    <id column="COORID" jdbcType="VARCHAR" property="coorid" />
-    <result column="RESOURCEID" jdbcType="VARCHAR" property="resourceid" />
-    <result column="CT_ID" jdbcType="VARCHAR" property="ctId" />
-    <result column="X" jdbcType="NUMERIC" property="x" />
-    <result column="Y" jdbcType="NUMERIC" property="y" />
-  </resultMap>
-  <sql id="Example_Where_Clause">
-    <where>
-      <foreach collection="oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
+<mapper namespace="com.ex.coor.mapper.ResourceCoorMapper">
+    <resultMap id="BaseResultMap" type="com.ex.coor.entity.ResourceCoor">
+        <id column="COORID" jdbcType="VARCHAR" property="coorid"/>
+        <result column="RESOURCEID" jdbcType="VARCHAR" property="resourceid"/>
+        <result column="CT_ID" jdbcType="VARCHAR" property="ctId"/>
+        <result column="X" jdbcType="NUMERIC" property="x"/>
+        <result column="Y" jdbcType="NUMERIC" property="y"/>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="("
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
             </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause">
-    <where>
-      <foreach collection="example.oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="("
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
             </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Base_Column_List">
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
     COORID, RESOURCEID, CT_ID, X, Y
   </sql>
-  <select id="selectByExample" parameterType="ResourceCoorExample" resultMap="BaseResultMap">
-    select
-    <if test="distinct">
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    from RESOURCE_COOR
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null">
-      order by ${orderByClause}
-    </if>
-  </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from RESOURCE_COOR
-    where COORID = #{coorid,jdbcType=VARCHAR}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <select id="selectByExample" parameterType="com.ex.coor.entity.ResourceCoorExample" resultMap="BaseResultMap">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from RESOURCE_COOR
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from RESOURCE_COOR
+        where COORID = #{coorid,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from RESOURCE_COOR
     where COORID = #{coorid,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="ResourceCoorExample">
-    delete from RESOURCE_COOR
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </delete>
-  <insert id="insert" parameterType="ResourceCoor">
+    <delete id="deleteByExample" parameterType="com.ex.coor.entity.ResourceCoorExample">
+        delete from RESOURCE_COOR
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="com.ex.coor.entity.ResourceCoor">
     insert into RESOURCE_COOR (COORID, RESOURCEID, CT_ID, 
       X, Y)
     values (#{coorid,jdbcType=VARCHAR}, #{resourceid,jdbcType=VARCHAR}, #{ctId,jdbcType=VARCHAR}, 
       #{x,jdbcType=NUMERIC}, #{y,jdbcType=NUMERIC})
   </insert>
-  <insert id="insertSelective" parameterType="ResourceCoor">
-    insert into RESOURCE_COOR
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="coorid != null">
-        COORID,
-      </if>
-      <if test="resourceid != null">
-        RESOURCEID,
-      </if>
-      <if test="ctId != null">
-        CT_ID,
-      </if>
-      <if test="x != null">
-        X,
-      </if>
-      <if test="y != null">
-        Y,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="coorid != null">
-        #{coorid,jdbcType=VARCHAR},
-      </if>
-      <if test="resourceid != null">
-        #{resourceid,jdbcType=VARCHAR},
-      </if>
-      <if test="ctId != null">
-        #{ctId,jdbcType=VARCHAR},
-      </if>
-      <if test="x != null">
-        #{x,jdbcType=NUMERIC},
-      </if>
-      <if test="y != null">
-        #{y,jdbcType=NUMERIC},
-      </if>
-    </trim>
-  </insert>
-  <select id="countByExample" parameterType="ResourceCoorExample" resultType="java.lang.Long">
-    select count(*) from RESOURCE_COOR
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map">
-    update RESOURCE_COOR
-    <set>
-      <if test="record.coorid != null">
-        COORID = #{record.coorid,jdbcType=VARCHAR},
-      </if>
-      <if test="record.resourceid != null">
+    <insert id="insertSelective" parameterType="com.ex.coor.entity.ResourceCoor">
+        insert into RESOURCE_COOR
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="coorid != null">
+                COORID,
+            </if>
+            <if test="resourceid != null">
+                RESOURCEID,
+            </if>
+            <if test="ctId != null">
+                CT_ID,
+            </if>
+            <if test="x != null">
+                X,
+            </if>
+            <if test="y != null">
+                Y,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="coorid != null">
+                #{coorid,jdbcType=VARCHAR},
+            </if>
+            <if test="resourceid != null">
+                #{resourceid,jdbcType=VARCHAR},
+            </if>
+            <if test="ctId != null">
+                #{ctId,jdbcType=VARCHAR},
+            </if>
+            <if test="x != null">
+                #{x,jdbcType=NUMERIC},
+            </if>
+            <if test="y != null">
+                #{y,jdbcType=NUMERIC},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.ex.coor.entity.ResourceCoorExample" resultType="java.lang.Long">
+        select count(*) from RESOURCE_COOR
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update RESOURCE_COOR
+        <set>
+            <if test="record.coorid != null">
+                COORID = #{record.coorid,jdbcType=VARCHAR},
+            </if>
+            <if test="record.resourceid != null">
+                RESOURCEID = #{record.resourceid,jdbcType=VARCHAR},
+            </if>
+            <if test="record.ctId != null">
+                CT_ID = #{record.ctId,jdbcType=VARCHAR},
+            </if>
+            <if test="record.x != null">
+                X = #{record.x,jdbcType=NUMERIC},
+            </if>
+            <if test="record.y != null">
+                Y = #{record.y,jdbcType=NUMERIC},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update RESOURCE_COOR
+        set COORID = #{record.coorid,jdbcType=VARCHAR},
         RESOURCEID = #{record.resourceid,jdbcType=VARCHAR},
-      </if>
-      <if test="record.ctId != null">
         CT_ID = #{record.ctId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.x != null">
         X = #{record.x,jdbcType=NUMERIC},
-      </if>
-      <if test="record.y != null">
-        Y = #{record.y,jdbcType=NUMERIC},
-      </if>
-    </set>
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map">
-    update RESOURCE_COOR
-    set COORID = #{record.coorid,jdbcType=VARCHAR},
-      RESOURCEID = #{record.resourceid,jdbcType=VARCHAR},
-      CT_ID = #{record.ctId,jdbcType=VARCHAR},
-      X = #{record.x,jdbcType=NUMERIC},
-      Y = #{record.y,jdbcType=NUMERIC}
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByPrimaryKeySelective" parameterType="ResourceCoor">
-    update RESOURCE_COOR
-    <set>
-      <if test="resourceid != null">
-        RESOURCEID = #{resourceid,jdbcType=VARCHAR},
-      </if>
-      <if test="ctId != null">
-        CT_ID = #{ctId,jdbcType=VARCHAR},
-      </if>
-      <if test="x != null">
-        X = #{x,jdbcType=NUMERIC},
-      </if>
-      <if test="y != null">
-        Y = #{y,jdbcType=NUMERIC},
-      </if>
-    </set>
-    where COORID = #{coorid,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="ResourceCoor">
+        Y = #{record.y,jdbcType=NUMERIC}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.ex.coor.entity.ResourceCoor">
+        update RESOURCE_COOR
+        <set>
+            <if test="resourceid != null">
+                RESOURCEID = #{resourceid,jdbcType=VARCHAR},
+            </if>
+            <if test="ctId != null">
+                CT_ID = #{ctId,jdbcType=VARCHAR},
+            </if>
+            <if test="x != null">
+                X = #{x,jdbcType=NUMERIC},
+            </if>
+            <if test="y != null">
+                Y = #{y,jdbcType=NUMERIC},
+            </if>
+        </set>
+        where COORID = #{coorid,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.ex.coor.entity.ResourceCoor">
     update RESOURCE_COOR
     set RESOURCEID = #{resourceid,jdbcType=VARCHAR},
       CT_ID = #{ctId,jdbcType=VARCHAR},
@@ -208,4 +210,45 @@
       Y = #{y,jdbcType=NUMERIC}
     where COORID = #{coorid,jdbcType=VARCHAR}
   </update>
+    <!-- List<ResourceData> selectByChengYun(ParamData paramData);
+
+     List<ResourceData> GPSAndGd(HashMap<String, Object> doubles) ;-->
+
+    <select id="selectByChengYun" parameterType="com.ex.coor.entity.pojo.ParamData" resultType="java.lang.String">
+   SELECT
+    RESOURCEID
+    FROM
+    RESOURCE_COOR
+    where
+    RESOURCE_COOR.CT_ID = #{ctId}
+    and (((x-(#{x}))*(x-(#{x})))+((y-(#{y}))*(y-(#{y}))) &lt;=(#{raidus}*#{raidus}))
+  </select>
+    <select id="gpsAndGd" parameterType="com.ex.coor.entity.pojo.ParamDto" resultType="java.lang.String">
+  SELECT
+    RESOURCEID
+    FROM
+    RESOURCE_COOR
+    where
+    RESOURCE_COOR.CT_ID = #{ctId}
+    and x&gt;=#{minLat}
+    and y&gt;=#{minLng}
+    and x&lt;=#{maxLat}
+    and y&lt;=#{maxLng}
+  </select>
+    <!--  SELECT
+      RESOURCEID
+      FROM
+      RESOURCE_COOR
+      where
+      RESOURCE_COOR.CT_ID = #{ctId}
+        and (POWER((x-#{x}),2)/POWER(#{a},2)+POWER((y-#{y}),2)/POWER(#{b},2))&lt;=1-->
+    <select id="gpsAndGd2" parameterType="com.ex.coor.entity.pojo.ParamDto" resultType="java.lang.String">
+    SELECT
+    RESOURCEID
+    FROM
+    RESOURCE_COOR
+    where
+    RESOURCE_COOR.CT_ID = #{ctId}
+    and (POWER((x-#{x}),2)/POWER(#{a},2)+POWER((y-#{y}),2)/POWER(#{b},2))&lt;=1
+  </select>
 </mapper>

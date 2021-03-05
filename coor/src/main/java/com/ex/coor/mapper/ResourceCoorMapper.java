@@ -3,6 +3,7 @@ package com.ex.coor.mapper;
 import com.ex.coor.entity.ResourceCoor;
 import com.ex.coor.entity.ResourceCoorExample;
 import com.ex.coor.entity.pojo.ParamData;
+import com.ex.coor.entity.pojo.ParamDto;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -33,6 +34,11 @@ public interface ResourceCoorMapper {
 
     int updateByPrimaryKey(ResourceCoor record);
 
+    List<String> gpsAndGd(ParamDto doubles);
+
+    List<String> selectByChengYun(ParamData paramData);
+
+    List<String> gpsAndGd2(ParamDto doubles);
 
 
 //    List<String> selectByChengYun();

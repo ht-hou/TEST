@@ -1,5 +1,6 @@
 package com.ex.coor.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -7,6 +8,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @ApiModel("资源数据")
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class ResourceData implements Serializable {
     @ApiModelProperty(value = "资源主键",hidden = true)
     private String resourceid;

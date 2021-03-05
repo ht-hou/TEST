@@ -3,6 +3,7 @@ package com.ex.coor.mapper;
 import com.ex.coor.entity.ResourceData;
 import com.ex.coor.entity.ResourceDataExample;
 import com.ex.coor.entity.pojo.ParamData;
+import com.ex.coor.entity.pojo.ParamDto;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -36,6 +37,6 @@ public interface ResourceDataMapper {
 
     List<ResourceData> selectByChengYun(ParamData paramData);
 
-    public List<ResourceData> gpsAndGd(@Param("gtId") int gtId, @Param("doubles") double[] doubles);
+     List<ResourceData> gpsAndGd( ParamDto doubles);
 
 }

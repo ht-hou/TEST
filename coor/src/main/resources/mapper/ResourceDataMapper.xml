@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ex.dameng.mapper.ResourceDataMapper">
-  <resultMap id="BaseResultMap" type="ResourceData">
+<mapper namespace="com.ex.coor.mapper.ResourceDataMapper">
+  <resultMap id="BaseResultMap" type="com.ex.coor.entity.ResourceData">
     <id column="RESOURCEID" jdbcType="VARCHAR" property="resourceid" />
     <result column="RESCATEID" jdbcType="VARCHAR" property="rescateid" />
     <result column="RESOURCENAME" jdbcType="VARCHAR" property="resourcename" />
@@ -114,7 +114,7 @@
     UPDATEDEP, ISIMPORT, ADDRESSFAIL, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, 
     F13, F14, F15, F16, F17, F18, F19, F20
   </sql>
-  <select id="selectByExample" parameterType="ResourceDataExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.ex.coor.entity.ResourceDataExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -138,13 +138,13 @@
     delete from RESOURCE_DATA
     where RESOURCEID = #{resourceid,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="ResourceDataExample">
+  <delete id="deleteByExample" parameterType="com.ex.coor.entity.ResourceDataExample">
     delete from RESOURCE_DATA
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="ResourceData">
+  <insert id="insert" parameterType="com.ex.coor.entity.ResourceData">
     insert into RESOURCE_DATA (RESOURCEID, RESCATEID, RESOURCENAME, 
       RESOURCEADDRESS, COUNT, FROMUNIT, 
       GOODAT, PEOPLENUM, HOLDNUM, 
@@ -174,7 +174,7 @@
       #{f14,jdbcType=VARCHAR}, #{f15,jdbcType=VARCHAR}, #{f16,jdbcType=VARCHAR}, #{f17,jdbcType=VARCHAR}, 
       #{f18,jdbcType=VARCHAR}, #{f19,jdbcType=VARCHAR}, #{f20,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="ResourceData">
+  <insert id="insertSelective" parameterType="com.ex.coor.entity.ResourceData">
     insert into RESOURCE_DATA
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="resourceid != null">
@@ -457,7 +457,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="ResourceDataExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.ex.coor.entity.ResourceDataExample" resultType="java.lang.Long">
     select count(*) from RESOURCE_DATA
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -661,7 +661,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="ResourceData">
+  <update id="updateByPrimaryKeySelective" parameterType="com.ex.coor.entity.ResourceData">
     update RESOURCE_DATA
     <set>
       <if test="rescateid != null">
@@ -802,7 +802,7 @@
     </set>
     where RESOURCEID = #{resourceid,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="ResourceData">
+  <update id="updateByPrimaryKey" parameterType="com.ex.coor.entity.ResourceData">
     update RESOURCE_DATA
     set RESCATEID = #{rescateid,jdbcType=VARCHAR},
       RESOURCENAME = #{resourcename,jdbcType=VARCHAR},
@@ -851,17 +851,5 @@
       F20 = #{f20,jdbcType=VARCHAR}
     where RESOURCEID = #{resourceid,jdbcType=VARCHAR}
   </update>
-  <!-- List<ResourceData> selectByChengYun(ParamData paramData);
 
-    List<ResourceData> GPSAndGd(HashMap<String, Object> doubles) ;-->
-
-  <select id="selectByChengYun" parameterType="com.ex.coor.entity.pojo.ParamData" resultMap="BaseResultMap">
-    select * from  RESOURCE_DATA where RESOURCEID in (SELECT
-    *
-    FROM
-    Resource_coor
-    where
-    RESOURCE_COOR.CT_ID = '1'
-    and (((x-(#{x}))*(x-(#{x})))+((y-(#{y}))*(y-(#{y}))) &lt;=(#{raidus}*1#{raidus})))
-  </select>
 </mapper>
