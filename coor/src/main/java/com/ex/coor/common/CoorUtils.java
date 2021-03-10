@@ -79,15 +79,15 @@ public class CoorUtils {
         Double dpmLat = 1 / degree1;
         Double radiusLat = dpmLat * raidusMile;
         //  System.out.println(radiusLat);
-        Double minLat = latitude - radiusLat;
-        Double maxLat = latitude + radiusLat;
+//        Double minLat = latitude - radiusLat;
+//        Double maxLat = latitude + radiusLat;
 
         // Double mpdLng = degree * Math.cos(latitude * (PI / 180));
         Double dpmLng = 1 / degree;
         Double radiusLng = dpmLng * raidusMile;
         //  System.out.println(radiusLng);
-        Double minLng = longitude - radiusLng;
-        Double maxLng = longitude + radiusLng;
+//        Double minLng = longitude - radiusLng;
+//        Double maxLng = longitude + radiusLng;
         return new ParamDto(paramData.getCtId(), radiusLat, radiusLng, paramData.getX(), paramData.getY());
 //        HashMap<String, Object> map = new HashMap<>();
 //        map.put("minLat",minLat);

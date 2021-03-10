@@ -1,5 +1,6 @@
 package com.ex.yh.pojo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonInclude
 public class TResourceData implements Serializable {
     private Long rdId;
     private Long rcId;

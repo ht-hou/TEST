@@ -23,9 +23,9 @@ public class ParamDto implements Serializable {
 //    private double maxLat;
 //    @ApiModelProperty("最大经度")
 //    private double maxLng;
-    private double a;
-    private double b;
-    private double x;
-    private double y;
+    private double a;//长轴
+    private double b;//短轴
+    private double x;//圆心x
+    private double y;//圆心y
 
 }

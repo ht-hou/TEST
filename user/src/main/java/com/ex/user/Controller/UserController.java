@@ -24,6 +24,10 @@ public class UserController {
             @ApiImplicitParam(name = "pageNum", value = "页码", defaultValue = "1"),
             @ApiImplicitParam(name = "pageSize", value = "分页数", defaultValue = "10")
     })
+    @ApiResponses({
+            @ApiResponse(code = 400, message = "请求参数没填好"),
+            @ApiResponse(code = 404, message = "请求路径没有或页面跳转路径不对")
+    })
     public ResultData getAll(@RequestParam(defaultValue = "1") int pageNum, @RequestParam(defaultValue = "10") int pageSize) {
         PageInfo all = userService.getAll(pageNum, pageSize);
         return new ResultData("200", all);
@@ -52,6 +56,10 @@ public class UserController {
 
     @PutMapping("/updateOne")
     @ApiOperation(value = "修改一个用户", notes = "修改用户")
+    @ApiResponses({
+            @ApiResponse(code = 400, message = "请求参数没填好"),
+            @ApiResponse(code = 404, message = "请求路径没有或页面跳转路径不对")
+    })
     public ResultData updateOne(@RequestBody UserDto user) {
 
         userService.updateOne(user);
@@ -65,6 +73,10 @@ public class UserController {
     @DeleteMapping("/deleteOne")
     @ApiOperation(value = " 删除一个用户", notes = "删除用户")
     @ApiImplicitParam(name = "userid", value = "用户编号", required = true)
+    @ApiResponses({
+            @ApiResponse(code = 400, message = "请求参数没填好"),
+            @ApiResponse(code = 404, message = "请求路径没有或页面跳转路径不对")
+    })
     public ResultData deleteOne(String userid) {
 
         userService.deleteOne(userid);
