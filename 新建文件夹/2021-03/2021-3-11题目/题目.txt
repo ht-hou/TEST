@@ -1,0 +1,8 @@
+1新建本地oracle数据库，具体见 建表需求word
+
+2 天气api地址
+https://www.sojson.com/api/weather.html
+根据api新建oracle数据库天气表，然后编写定时服务，每1小时一次，同步数据入库
+
+3 编写上传下载接口，支持上传多媒体文件和下载，过滤其它格式的文件
+

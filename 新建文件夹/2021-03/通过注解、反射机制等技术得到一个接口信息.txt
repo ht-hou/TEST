@@ -1,0 +1,369 @@
+[ {
+  "$00" : {
+    "$01$id" : 1,
+    "$02$model" : "模块名称",
+    "$03$title" : "对象标题",
+    "$04$clazz" : "demo.TestController",
+    "$05$shine" : "Name Of Controller",
+    "$06$describe" : "描述说明",
+    "$07$nozzle" : {
+      "fullyName" : "org.springframework.web.bind.annotation.RequestMapping",
+      "simpleName" : "RequestMapping"
+    },
+    "$08$path" : [ "api/" ],
+    "$09$type" : [ "POST" ],
+    "$10$header" : [ "Headers Of Controller" ],
+    "$11$consume" : [ "Consumes Of Controller" ],
+    "$12$produce" : [ "Produces Of Controller" ],
+    "$13$param" : [ "Params Of Controller" ]
+  },
+  "$01$id" : 1000001001002,
+  "$02$title" : "接口标题",
+  "$03$describe" : "接口描述",
+  "$04$queue" : 2,
+  "$05$token" : false,
+  "$06$logger" : false,
+  "$07$jump" : [ "http://www.ink10000.com/" ],
+  "$08$used" : [ "http://portal.ink10000.com/" ],
+  "$09$shine" : "Name Of Method",
+  "$10$state" : "public java.util.LinkedHashMap demo(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response, @org.springframework.web.bind.annotation.PathVariable java.lang.String 读取请求地址中的值, @org.springframework.web.bind.annotation.RequestParam demo.TestController$Param 自定义参数类, @org.springframework.web.bind.annotation.RequestBody demo.TestController$Demo 序列化JSON数据到对象, int 基本数据类型, java.lang.Long 封装数据类型, java.math.BigDecimal 超大数字类型, @org.springframework.format.annotation.DateTimeFormat java.util.Date 复杂数据类型, double[] 简单数组类型, java.lang.Float[] 封装数组类型, java.util.LinkedHashMap<java.lang.String, java.lang.Object> 集合数据类型, java.util.LinkedHashMap<java.lang.Integer, java.util.List<demo.TestController$Param>> 复杂集合类型, java.util.Map<java.lang.String[], java.util.ArrayList<java.util.LinkedHashMap<java.util.List<demo.TestController$Demo[]>, java.lang.String>>[]>[][] 复杂混合类型) throws java.lang.Exception;",
+  "$11$nozzle" : {
+    "fullyName" : "org.springframework.web.bind.annotation.RequestMapping",
+    "simpleName" : "RequestMapping"
+  },
+  "$12$revert" : {
+    "fullyName" : "java.util.LinkedHashMap",
+    "simpleName" : "LinkedHashMap"
+  },
+  "$13$path" : [ "api/demo" ],
+  "$14$type" : [ "GET" ],
+  "$15$header" : [ "Headers Of Method" ],
+  "$16$consume" : [ "Consumes Of Method" ],
+  "$17$produce" : [ "Produces Of Method" ],
+  "$18$param" : [ "Params Of Method" ],
+  "$19$kagi" : "序列化JSON数据到对象",
+  "$20$need" : true,
+  "$21$entry" : {
+    "fullyName" : "demo.TestController$Demo",
+    "simpleName" : "TestController$Demo"
+  },
+  "$22$caper" : [ {
+    "fullyName" : "org.springframework.web.bind.annotation.RequestBody",
+    "simpleName" : "RequestBody"
+  } ],
+  "$23$legal" : {
+    "kagi-key" : {
+      "某个取值集合的键" : "某个取值集合的值"
+    },
+    "kagi-key2" : {
+      "1" : "某个取值集合的值"
+    }
+  },
+  "$24$worth" : [ {
+    "$01$title" : "id",
+    "$02$field" : "主键",
+    "$03$clazz" : "java.lang.String",
+    "$04$tacit" : true
+  }, {
+    "$01$title" : "name",
+    "$02$field" : "电影名称",
+    "$03$clazz" : "java.lang.String",
+    "$04$mock" : "默认不返回"
+  } ],
+  "$25$order" : {
+    "id" : true,
+    "name" : false
+  },
+  "$26$leafer" : "GENERAL_LEAFER",
+  "$27$share" : [ {
+    "$01$title" : "返参数吗",
+    "$02$name" : "$args",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.Boolean",
+      "simpleName" : "Boolean"
+    },
+    "$06$need" : false,
+    "$07$clear" : false,
+    "$16$mock" : "false"
+  }, {
+    "$01$title" : "查询字段",
+    "$02$name" : "$worth",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.String[]",
+      "simpleName" : "String[]"
+    },
+    "$06$need" : false,
+    "$07$clear" : true
+  }, {
+    "$01$title" : "排序字段",
+    "$02$name" : "$order",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.String",
+      "simpleName" : "String"
+    },
+    "$06$need" : false,
+    "$07$clear" : true
+  }, {
+    "$01$title" : "每页条数",
+    "$02$name" : "$size",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.Long",
+      "simpleName" : "Long"
+    },
+    "$06$need" : false,
+    "$07$clear" : false,
+    "$16$mock" : "10"
+  }, {
+    "$01$title" : "当前页号",
+    "$02$name" : "$now",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.Long",
+      "simpleName" : "Long"
+    },
+    "$06$need" : false,
+    "$07$clear" : false,
+    "$16$mock" : "1"
+  } ],
+  "$28$center" : [ {
+    "$01$title" : "参数名称",
+    "$02$name" : "id",
+    "$03$used" : "老版字段",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.String",
+      "simpleName" : "String"
+    },
+    "$05$caper" : [ {
+      "fullyName" : "com.mc.joggle.ApiRequest$ApiField",
+      "simpleName" : "ApiRequest$ApiField"
+    } ],
+    "$06$need" : true,
+    "$07$clear" : true,
+    "$08$length" : 20,
+    "$15$tacit" : "默认数据",
+    "$16$mock" : "模拟数据",
+    "$17$note" : "备注说明"
+  }, {
+    "$01$title" : "数组字段",
+    "$02$name" : "array",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.String[]",
+      "simpleName" : "String[]"
+    },
+    "$05$caper" : [ {
+      "fullyName" : "com.mc.joggle.ApiRequest$ApiField",
+      "simpleName" : "ApiRequest$ApiField"
+    } ],
+    "$06$need" : false,
+    "$07$clear" : false,
+    "$09$block" : 1,
+    "$14$kagi" : "kagi-key"
+  }, {
+    "$01$title" : "设值范围",
+    "$02$name" : "scope",
+    "$04$clazz" : {
+      "fullyName" : "long",
+      "simpleName" : "long"
+    },
+    "$05$caper" : [ {
+      "fullyName" : "com.mc.joggle.ApiRequest$ApiField",
+      "simpleName" : "ApiRequest$ApiField"
+    } ],
+    "$06$need" : false,
+    "$07$clear" : false,
+    "$10$smaller" : 1,
+    "$11$greater" : 2,
+    "$15$tacit" : "0",
+    "$16$mock" : "0"
+  }, {
+    "$01$title" : "格式模板",
+    "$02$name" : "format",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.String",
+      "simpleName" : "String"
+    },
+    "$05$caper" : [ {
+      "fullyName" : "com.mc.joggle.ApiRequest$ApiField",
+      "simpleName" : "ApiRequest$ApiField"
+    } ],
+    "$06$need" : false,
+    "$07$clear" : false,
+    "$12$format" : "yyyy-MM-dd HH:mm:ss"
+  }, {
+    "$01$title" : "正则判断",
+    "$02$name" : "pattern",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.String",
+      "simpleName" : "String"
+    },
+    "$05$caper" : [ {
+      "fullyName" : "com.mc.joggle.ApiRequest$ApiField",
+      "simpleName" : "ApiRequest$ApiField"
+    } ],
+    "$06$need" : false,
+    "$07$clear" : false,
+    "$13$pattern" : "^[A-Za-z0-9一-龥]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$"
+  }, {
+    "$01$title" : "gather",
+    "$02$name" : "gather",
+    "$04$clazz" : {
+      "fullyName" : "java.util.LinkedHashMap<java.lang.String, java.lang.Object>",
+      "simpleName" : "LinkedHashMap<String, Object>"
+    },
+    "$06$need" : false,
+    "$07$clear" : false
+  }, {
+    "$01$title" : "complex",
+    "$02$name" : "complex",
+    "$04$clazz" : {
+      "fullyName" : "java.util.LinkedHashMap<java.lang.Object[], java.util.List<java.lang.Object>>",
+      "simpleName" : "LinkedHashMap<Object[], List<Object>>"
+    },
+    "$06$need" : false,
+    "$07$clear" : false
+  }, {
+    "$01$title" : "blend",
+    "$02$name" : "blend",
+    "$04$clazz" : {
+      "fullyName" : "java.util.Map<java.lang.String[], java.util.ArrayList<java.util.LinkedHashMap<java.util.List<java.lang.Object[]>, java.lang.String>>[]>[][]",
+      "simpleName" : "Map<String[], ArrayList<LinkedHashMap<List<Object[]>, String>>[]>[][]"
+    },
+    "$06$need" : false,
+    "$07$clear" : false
+  } ],
+  "$29$attach" : [ {
+    "$01$title" : "读取请求地址中的值",
+    "$02$name" : "id",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.String",
+      "simpleName" : "String"
+    },
+    "$05$caper" : [ {
+      "fullyName" : "org.springframework.web.bind.annotation.PathVariable",
+      "simpleName" : "PathVariable"
+    } ],
+    "$06$need" : true,
+    "$07$clear" : false
+  }, {
+    "$01$title" : "自定义参数类",
+    "$02$name" : "param",
+    "$04$clazz" : {
+      "fullyName" : "demo.TestController$Param",
+      "simpleName" : "TestController$Param"
+    },
+    "$05$caper" : [ {
+      "fullyName" : "org.springframework.web.bind.annotation.RequestParam",
+      "simpleName" : "RequestParam"
+    } ],
+    "$06$need" : false,
+    "$07$clear" : false
+  }, {
+    "$01$title" : "基本数据类型",
+    "$02$name" : "基本数据类型",
+    "$04$clazz" : {
+      "fullyName" : "int",
+      "simpleName" : "int"
+    },
+    "$06$need" : false,
+    "$07$clear" : false,
+    "$15$tacit" : "0",
+    "$16$mock" : "0"
+  }, {
+    "$01$title" : "封装数据类型",
+    "$02$name" : "封装数据类型",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.Long",
+      "simpleName" : "Long"
+    },
+    "$06$need" : false,
+    "$07$clear" : false
+  }, {
+    "$01$title" : "超大数字类型",
+    "$02$name" : "超大数字类型",
+    "$04$clazz" : {
+      "fullyName" : "java.math.BigDecimal",
+      "simpleName" : "BigDecimal"
+    },
+    "$06$need" : false,
+    "$07$clear" : false
+  }, {
+    "$01$title" : "复杂数据类型",
+    "$02$name" : "复杂数据类型",
+    "$04$clazz" : {
+      "fullyName" : "java.util.Date",
+      "simpleName" : "Date"
+    },
+    "$05$caper" : [ {
+      "fullyName" : "org.springframework.format.annotation.DateTimeFormat",
+      "simpleName" : "DateTimeFormat"
+    } ],
+    "$06$need" : false,
+    "$07$clear" : false,
+    "$12$format" : "yyyy-MM-dd HH:mm:ss"
+  }, {
+    "$01$title" : "简单数组类型",
+    "$02$name" : "简单数组类型",
+    "$04$clazz" : {
+      "fullyName" : "double[]",
+      "simpleName" : "double[]"
+    },
+    "$06$need" : false,
+    "$07$clear" : false
+  }, {
+    "$01$title" : "封装数组类型",
+    "$02$name" : "封装数组类型",
+    "$04$clazz" : {
+      "fullyName" : "java.lang.Float[]",
+      "simpleName" : "Float[]"
+    },
+    "$06$need" : false,
+    "$07$clear" : false
+  }, {
+    "$01$title" : "集合数据类型",
+    "$02$name" : "集合数据类型",
+    "$04$clazz" : {
+      "fullyName" : "java.util.LinkedHashMap<java.lang.String, java.lang.Object>",
+      "simpleName" : "LinkedHashMap<String, Object>"
+    },
+    "$06$need" : false,
+    "$07$clear" : false
+  }, {
+    "$01$title" : "复杂集合类型",
+    "$02$name" : "复杂集合类型",
+    "$04$clazz" : {
+      "fullyName" : "java.util.LinkedHashMap<java.lang.Integer, java.util.List<demo.TestController$Param>>",
+      "simpleName" : "LinkedHashMap<Integer, List<TestController$Param>>"
+    },
+    "$06$need" : false,
+    "$07$clear" : false
+  }, {
+    "$01$title" : "复杂混合类型",
+    "$02$name" : "复杂混合类型",
+    "$04$clazz" : {
+      "fullyName" : "java.util.Map<java.lang.String[], java.util.ArrayList<java.util.LinkedHashMap<java.util.List<demo.TestController$Demo[]>, java.lang.String>>[]>[][]",
+      "simpleName" : "Map<String[], ArrayList<LinkedHashMap<List<TestController$Demo[]>, String>>[]>[][]"
+    },
+    "$06$need" : false,
+    "$07$clear" : false
+  } ],
+  "$30$body" : {
+    "code" : 0,
+    "text" : "OK",
+    "note" : "请求执行成功",
+    "body" : {
+      "datas" : [ {
+        "$01$title" : "id",
+        "$02$field" : "主键",
+        "$03$clazz" : "java.lang.String"
+      }, {
+        "$01$title" : "name",
+        "$02$field" : "电影名称",
+        "$03$clazz" : "java.lang.String"
+      }, {
+        "$01$title" : "screen",
+        "$02$field" : "上映日期",
+        "$03$clazz" : "java.lang.String",
+        "$04$mock" : "格式如：2017-09-20"
+      } ]
+    }
+  }
+} ]

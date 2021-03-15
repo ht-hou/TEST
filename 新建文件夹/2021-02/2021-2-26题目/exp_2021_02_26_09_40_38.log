@@ -1,0 +1,869 @@
+开始导出模式[SPT_USER].....
+----- 共导出 0 个SEQUENCE ----- 
+
+----- 共导出 0 个VIEW ----- 
+
+----- 共导出 0 个TRIGGER ----- 
+
+----- 共导出 0 个COMMENT VIEW ----- 
+
+----- 共导出 0 个COMMENT COL ----- 
+
+导出第 1 个PROCEDURE： P_INSERT
+导出第 2 个PROCEDURE： PROC_CASEKEY_UPSTATE
+----- 共导出 2 个PROCEDURE ----- 
+
+----- 共导出 0 个SYNONYM ----- 
+
+----- 共导出 0 个DBLINK ----- 
+
+----- 共导出 0 个TRIGGER ----- 
+
+----- 共导出 0 个PACKAGE ----- 
+
+----- 共导出 0 个PKG_BODY ----- 
+
+----- 共导出 0 个OBJECT of NO REFER OTHER CLASS ----- 
+
+----- 共导出 0 个OBJECT of REFER OTHER CLASS ----- 
+
+----- 共导出 0 个JCLASS ----- 
+
+----- 共导出 0 个CLASS_BODY ----- 
+
+----- 共导出 0 个DOMAIN ----- 
+
+导出模式下的对象权限...
+
+
+----- [2021-02-26 09:42:09]导出表：ORG_DEP_ICON -----
+
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导入/出 ORG_DEP_ICON 注释
+导出索引：ORG_DEP_ICON_PK 
+
+导出模式下的对象权限...
+
+表ORG_DEP_ICON导出结束，共导出 0 行数据
+
+
+----- [2021-02-26 09:42:10]导出表：ORG_FAXTYPE -----
+
+导入/出 ORG_FAXTYPE 注释
+导入/出 ORG_FAXTYPE 注释
+导入/出 ORG_FAXTYPE 注释
+导入/出 ORG_FAXTYPE 注释
+导入/出 ORG_FAXTYPE 注释
+导入/出 ORG_FAXTYPE 注释
+导入/出 ORG_FAXTYPE 注释
+导入/出 ORG_FAXTYPE 注释
+导入/出 ORG_FAXTYPE 注释
+导入/出 ORG_FAXTYPE 注释
+导出索引：ORG_FAXTYPE_PK 
+
+导出模式下的对象权限...
+
+表ORG_FAXTYPE导出结束，共导出 1 行数据
+
+
+----- [2021-02-26 09:42:17]导出表：ORG_TELTYPE -----
+
+导入/出 ORG_TELTYPE 注释
+导入/出 ORG_TELTYPE 注释
+导入/出 ORG_TELTYPE 注释
+导入/出 ORG_TELTYPE 注释
+导入/出 ORG_TELTYPE 注释
+导入/出 ORG_TELTYPE 注释
+导入/出 ORG_TELTYPE 注释
+导入/出 ORG_TELTYPE 注释
+导入/出 ORG_TELTYPE 注释
+导入/出 ORG_TELTYPE 注释
+导出索引：ORG_TELTYPE_PK 
+
+导出模式下的对象权限...
+
+表ORG_TELTYPE导出结束，共导出 2 行数据
+
+
+----- [2021-02-26 09:42:25]导出表：PRO_PRODUCT -----
+
+导入/出 PRO_PRODUCT 注释
+导入/出 PRO_PRODUCT 注释
+导入/出 PRO_PRODUCT 注释
+导入/出 PRO_PRODUCT 注释
+导入/出 PRO_PRODUCT 注释
+导入/出 PRO_PRODUCT 注释
+导入/出 PRO_PRODUCT 注释
+导入/出 PRO_PRODUCT 注释
+导入/出 PRO_PRODUCT 注释
+导入/出 PRO_PRODUCT 注释
+导入/出 PRO_PRODUCT 注释
+导出索引：PRO_PRODUCT_PK 
+
+导出模式下的对象权限...
+
+表PRO_PRODUCT导出结束，共导出 3 行数据
+
+
+----- [2021-02-26 09:42:33]导出表：TMP_AUTH_FUNCTION -----
+
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导入/出 TMP_AUTH_FUNCTION 注释
+导出模式下的对象权限...
+
+表TMP_AUTH_FUNCTION导出结束，共导出 0 行数据
+
+
+----- [2021-02-26 09:42:34]导出表：TMP_ORG_FAX -----
+
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导入/出 TMP_ORG_FAX 注释
+导出模式下的对象权限...
+
+表TMP_ORG_FAX导出结束，共导出 7 行数据
+
+
+----- [2021-02-26 09:42:42]导出表：TMP_ORG_TEL -----
+
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导入/出 TMP_ORG_TEL 注释
+导出模式下的对象权限...
+
+表TMP_ORG_TEL导出结束，共导出 14 行数据
+
+
+----- [2021-02-26 09:42:50]导出表：TMP_PRO_KEY -----
+
+导入/出 TMP_PRO_KEY 注释
+导入/出 TMP_PRO_KEY 注释
+导入/出 TMP_PRO_KEY 注释
+导入/出 TMP_PRO_KEY 注释
+导入/出 TMP_PRO_KEY 注释
+导入/出 TMP_PRO_KEY 注释
+导入/出 TMP_PRO_KEY 注释
+导入/出 TMP_PRO_KEY 注释
+导入/出 TMP_PRO_KEY 注释
+导入/出 TMP_PRO_KEY 注释
+导入/出 TMP_PRO_KEY 注释
+导入/出 TMP_PRO_KEY 注释
+导出模式下的对象权限...
+
+表TMP_PRO_KEY导出结束，共导出 3 行数据
+
+
+----- [2021-02-26 09:42:59]导出表：TMP_PRO_KEY_VS_DEP -----
+
+导入/出 TMP_PRO_KEY_VS_DEP 注释
+导入/出 TMP_PRO_KEY_VS_DEP 注释
+导入/出 TMP_PRO_KEY_VS_DEP 注释
+导入/出 TMP_PRO_KEY_VS_DEP 注释
+导出模式下的对象权限...
+
+表TMP_PRO_KEY_VS_DEP导出结束，共导出 3 行数据
+
+
+----- [2021-02-26 09:43:08]导出表：TMP_PRO_KEY_VS_USER -----
+
+导入/出 TMP_PRO_KEY_VS_USER 注释
+导入/出 TMP_PRO_KEY_VS_USER 注释
+导入/出 TMP_PRO_KEY_VS_USER 注释
+导入/出 TMP_PRO_KEY_VS_USER 注释
+导出模式下的对象权限...
+
+表TMP_PRO_KEY_VS_USER导出结束，共导出 3 行数据
+
+
+----- [2021-02-26 09:43:16]导出表：ORG_FAX -----
+
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导入/出 ORG_FAX 注释
+导出索引：ORG_FAX_PK 
+
+导出索引：RELATIONSHIP_22_FK 
+
+导出索引：RELATIONSHIP_7_FK 
+
+导出模式下的对象权限...
+
+表ORG_FAX导出结束，共导出 3 行数据
+
+
+----- [2021-02-26 09:43:25]导出表：ORG_TEL -----
+
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导入/出 ORG_TEL 注释
+导出索引：ORG_TEL_PK 
+
+导出索引：RELATIONSHIP_21_FK 
+
+导出索引：RELATIONSHIP_8_FK 
+
+导出模式下的对象权限...
+
+表ORG_TEL导出结束，共导出 33 行数据
+
+
+----- [2021-02-26 09:43:33]导出表：PRO_KEY -----
+
+导入/出 PRO_KEY 注释
+导入/出 PRO_KEY 注释
+导入/出 PRO_KEY 注释
+导入/出 PRO_KEY 注释
+导入/出 PRO_KEY 注释
+导入/出 PRO_KEY 注释
+导入/出 PRO_KEY 注释
+导入/出 PRO_KEY 注释
+导入/出 PRO_KEY 注释
+导入/出 PRO_KEY 注释
+导入/出 PRO_KEY 注释
+导入/出 PRO_KEY 注释
+导出索引：PRO_KEY_PK 
+
+导出索引：RELATIONSHIP_10_FK 
+
+导出模式下的对象权限...
+
+表PRO_KEY导出结束，共导出 4 行数据
+
+
+----- [2021-02-26 09:43:41]导出表：PRO_KEY_VS_DEP -----
+
+导入/出 PRO_KEY_VS_DEP 注释
+导入/出 PRO_KEY_VS_DEP 注释
+导入/出 PRO_KEY_VS_DEP 注释
+导入/出 PRO_KEY_VS_DEP 注释
+导出索引：PRO_KEY_VS_DEP_PK 
+
+导出索引：RELATIONSHIP_12_FK 
+
+导出模式下的对象权限...
+
+表PRO_KEY_VS_DEP导出结束，共导出 302 行数据
+
+
+----- [2021-02-26 09:43:49]导出表：PRO_KEY_VS_USER -----
+
+导入/出 PRO_KEY_VS_USER 注释
+导入/出 PRO_KEY_VS_USER 注释
+导入/出 PRO_KEY_VS_USER 注释
+导入/出 PRO_KEY_VS_USER 注释
+导出索引：PRO_KEY_VS_USER_PK 
+
+导出索引：RELATIONSHIP_11_FK 
+
+导出模式下的对象权限...
+
+表PRO_KEY_VS_USER导出结束，共导出 21 行数据
+
+
+----- [2021-02-26 09:43:57]导出表：ORG_MEM -----
+
+导入/出 ORG_MEM 注释
+导入/出 ORG_MEM 注释
+导入/出 ORG_MEM 注释
+导入/出 ORG_MEM 注释
+导出索引：ORG_MEM_PK 
+
+导出模式下的对象权限...
+
+表ORG_MEM导出结束，共导出 5 行数据
+
+
+----- [2021-02-26 09:44:05]导出表：MENU -----
+
+导入/出 MENU 注释
+导入/出 MENU 注释
+导入/出 MENU 注释
+导入/出 MENU 注释
+导入/出 MENU 注释
+导入/出 MENU 注释
+导入/出 MENU 注释
+导入/出 MENU 注释
+导出索引：MENU_PK 
+
+导出模式下的对象权限...
+
+表MENU导出结束，共导出 31 行数据
+
+
+----- [2021-02-26 09:44:15]导出表：POSTDEP -----
+
+导入/出 POSTDEP 注释
+导入/出 POSTDEP 注释
+导入/出 POSTDEP 注释
+导入/出 POSTDEP 注释
+导入/出 POSTDEP 注释
+导入/出 POSTDEP 注释
+导入/出 POSTDEP 注释
+导出索引：POSTDEP_PK 
+
+导出索引：RELATIONSHIP_19_FK 
+
+导出模式下的对象权限...
+
+表POSTDEP导出结束，共导出 0 行数据
+
+
+----- [2021-02-26 09:44:16]导出表：ROLE -----
+
+导入/出 ROLE 注释
+导入/出 ROLE 注释
+导入/出 ROLE 注释
+导入/出 ROLE 注释
+导入/出 ROLE 注释
+导入/出 ROLE 注释
+导入/出 ROLE 注释
+导入/出 ROLE 注释
+导入/出 ROLE 注释
+导入/出 ROLE 注释
+导出索引：ROLE_PK 
+
+导出模式下的对象权限...
+
+表ROLE导出结束，共导出 498 行数据
+
+
+----- [2021-02-26 09:44:24]导出表：ROLE_VS_MENU -----
+
+导入/出 ROLE_VS_MENU 注释
+导入/出 ROLE_VS_MENU 注释
+导入/出 ROLE_VS_MENU 注释
+导入/出 ROLE_VS_MENU 注释
+导出索引：ROLE_VS_MENU_PK 
+
+导出索引：RELATIONSHIP_20_FK 
+
+导出索引：RELATIONSHIP_23_FK 
+
+导出模式下的对象权限...
+
+表ROLE_VS_MENU导出结束，共导出 8719 行数据
+
+
+----- [2021-02-26 09:44:32]导出表：tempuser -----
+
+导出模式下的对象权限...
+
+表tempuser导出结束，共导出 738 行数据
+
+
+----- [2021-02-26 09:44:40]导出表：ORG_KESHI -----
+
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导入/出 ORG_KESHI 注释
+导出索引：ORG_KESHI_PK 
+
+导出索引：RELATIONSHIP_26_FK 
+
+导出模式下的对象权限...
+
+表ORG_KESHI导出结束，共导出 150 行数据
+
+
+----- [2021-02-26 09:44:47]导出表：ORG_USER_VS_DEP -----
+
+导入/出 ORG_USER_VS_DEP 注释
+导入/出 ORG_USER_VS_DEP 注释
+导入/出 ORG_USER_VS_DEP 注释
+导入/出 ORG_USER_VS_DEP 注释
+导入/出 ORG_USER_VS_DEP 注释
+导入/出 ORG_USER_VS_DEP 注释
+导入/出 ORG_USER_VS_DEP 注释
+导入/出 ORG_USER_VS_DEP 注释
+导出索引：ORG_USER_VS_DEP_PK 
+
+导出索引：RELATIONSHIP_3_FK 
+
+导出索引：RELATIONSHIP_4_FK 
+
+导出索引：RELATIONSHIP_25_FK 
+
+导出模式下的对象权限...
+
+表ORG_USER_VS_DEP导出结束，共导出 1352 行数据
+
+
+----- [2021-02-26 09:44:55]导出表：ORG_LEVEL -----
+
+导入/出 ORG_LEVEL 注释
+导入/出 ORG_LEVEL 注释
+导入/出 ORG_LEVEL 注释
+导入/出 ORG_LEVEL 注释
+导入/出 ORG_LEVEL 注释
+导入/出 ORG_LEVEL 注释
+导入/出 ORG_LEVEL 注释
+导入/出 ORG_LEVEL 注释
+导入/出 ORG_LEVEL 注释
+导入/出 ORG_LEVEL 注释
+导入/出 ORG_LEVEL 注释
+导出索引：ORG_LEVEL_PK 
+
+导出模式下的对象权限...
+
+表ORG_LEVEL导出结束，共导出 22 行数据
+
+
+----- [2021-02-26 09:45:02]导出表：VERIFICATIONCODETYPE -----
+
+导入/出 VERIFICATIONCODETYPE 注释
+导入/出 VERIFICATIONCODETYPE 注释
+导入/出 VERIFICATIONCODETYPE 注释
+导出索引：VERIFICATIONCODETYPE_PK 
+
+导出模式下的对象权限...
+
+表VERIFICATIONCODETYPE导出结束，共导出 3 行数据
+
+
+----- [2021-02-26 09:45:09]导出表：ORG_TOKEN -----
+
+导入/出 ORG_TOKEN 注释
+导入/出 ORG_TOKEN 注释
+导入/出 ORG_TOKEN 注释
+导入/出 ORG_TOKEN 注释
+导入/出 ORG_TOKEN 注释
+导入/出 ORG_TOKEN 注释
+导入/出 ORG_TOKEN 注释
+导入/出 ORG_TOKEN 注释
+导入/出 ORG_TOKEN 注释
+导入/出 ORG_TOKEN 注释
+导出索引：ORG_TOKEN_PK 
+
+导出索引：RELATIONSHIP_2_FK 
+
+导出索引：RELATIONSHIP_29_FK 
+
+导出模式下的对象权限...
+
+表ORG_TOKEN导出结束，共导出 267 行数据
+
+
+----- [2021-02-26 09:45:18]导出表：ORG_CHANGEDEP -----
+
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导入/出 ORG_CHANGEDEP 注释
+导出索引：ORG_CHANGEDEP_PK 
+
+导出索引：RELATIONSHIP_30_FK 
+
+导出模式下的对象权限...
+
+表ORG_CHANGEDEP导出结束，共导出 3 行数据
+
+
+----- [2021-02-26 09:45:27]导出表：TMP_ORG_DEPARTMENT -----
+
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导入/出 TMP_ORG_DEPARTMENT 注释
+导出模式下的对象权限...
+
+表TMP_ORG_DEPARTMENT导出结束，共导出 244 行数据
+
+
+----- [2021-02-26 09:45:36]导出表：TMP_ORG_USER -----
+
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导入/出 TMP_ORG_USER 注释
+导出模式下的对象权限...
+
+表TMP_ORG_USER导出结束，共导出 1117 行数据
+
+
+----- [2021-02-26 09:45:47]导出表：TMP_VERIFICATIONCODE -----
+
+导入/出 TMP_VERIFICATIONCODE 注释
+导入/出 TMP_VERIFICATIONCODE 注释
+导入/出 TMP_VERIFICATIONCODE 注释
+导入/出 TMP_VERIFICATIONCODE 注释
+导入/出 TMP_VERIFICATIONCODE 注释
+导入/出 TMP_VERIFICATIONCODE 注释
+导入/出 TMP_VERIFICATIONCODE 注释
+导入/出 TMP_VERIFICATIONCODE 注释
+导入/出 TMP_VERIFICATIONCODE 注释
+导出模式下的对象权限...
+
+表TMP_VERIFICATIONCODE导出结束，共导出 69 行数据
+
+
+----- [2021-02-26 09:45:55]导出表：ORG_DEPARTMENT -----
+
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导入/出 ORG_DEPARTMENT 注释
+导出索引：ORG_DEPARTMENT_PK 
+
+导出索引：RELATIONSHIP_15_FK 
+
+导出索引：RELATIONSHIP_18_FK 
+
+导出模式下的对象权限...
+
+表ORG_DEPARTMENT导出结束，共导出 248 行数据
+
+
+----- [2021-02-26 09:46:01]导出表：ORG_USER -----
+
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导入/出 ORG_USER 注释
+导出索引：ORG_USER_PK 
+
+导出索引：RELATIONSHIP_1_FK 
+
+导出模式下的对象权限...
+
+表ORG_USER导出结束，共导出 1151 行数据
+
+
+----- [2021-02-26 09:46:09]导出表：VERIFICATIONCODE -----
+
+导入/出 VERIFICATIONCODE 注释
+导入/出 VERIFICATIONCODE 注释
+导入/出 VERIFICATIONCODE 注释
+导入/出 VERIFICATIONCODE 注释
+导入/出 VERIFICATIONCODE 注释
+导入/出 VERIFICATIONCODE 注释
+导入/出 VERIFICATIONCODE 注释
+导入/出 VERIFICATIONCODE 注释
+导入/出 VERIFICATIONCODE 注释
+导入/出 VERIFICATIONCODE 注释
+导出索引：VERIFICATIONCODE_PK 
+
+导出索引：RELATIONSHIP_27_FK 
+
+导出索引：RELATIONSHIP_28_FK 
+
+导出模式下的对象权限...
+
+表VERIFICATIONCODE导出结束，共导出 138 行数据
+
+
+----- [2021-02-26 09:46:17]导出表：TMP_ORG_ADDRESS_BOOK -----
+
+导入/出 TMP_ORG_ADDRESS_BOOK 注释
+导入/出 TMP_ORG_ADDRESS_BOOK 注释
+导入/出 TMP_ORG_ADDRESS_BOOK 注释
+导入/出 TMP_ORG_ADDRESS_BOOK 注释
+导入/出 TMP_ORG_ADDRESS_BOOK 注释
+导入/出 TMP_ORG_ADDRESS_BOOK 注释
+导入/出 TMP_ORG_ADDRESS_BOOK 注释
+导入/出 TMP_ORG_ADDRESS_BOOK 注释
+导入/出 TMP_ORG_ADDRESS_BOOK 注释
+导入/出 TMP_ORG_ADDRESS_BOOK 注释
+导出模式下的对象权限...
+
+表TMP_ORG_ADDRESS_BOOK导出结束，共导出 0 行数据
+
+
+----- [2021-02-26 09:46:18]导出表：TMP_ORG_BOOK_VS_USER -----
+
+导入/出 TMP_ORG_BOOK_VS_USER 注释
+导入/出 TMP_ORG_BOOK_VS_USER 注释
+导入/出 TMP_ORG_BOOK_VS_USER 注释
+导入/出 TMP_ORG_BOOK_VS_USER 注释
+导入/出 TMP_ORG_BOOK_VS_USER 注释
+导入/出 TMP_ORG_BOOK_VS_USER 注释
+导入/出 TMP_ORG_BOOK_VS_USER 注释
+导入/出 TMP_ORG_BOOK_VS_USER 注释
+导出模式下的对象权限...
+
+表TMP_ORG_BOOK_VS_USER导出结束，共导出 11 行数据
+
+
+----- [2021-02-26 09:46:26]导出表：TMP_RM_DATARIGHT -----
+
+导入/出 TMP_RM_DATARIGHT 注释
+导入/出 TMP_RM_DATARIGHT 注释
+导入/出 TMP_RM_DATARIGHT 注释
+导入/出 TMP_RM_DATARIGHT 注释
+导出模式下的对象权限...
+
+表TMP_RM_DATARIGHT导出结束，共导出 4499 行数据
+
+
+----- [2021-02-26 09:46:35]导出表：ORG_ADDRESS_BOOK -----
+
+导入/出 ORG_ADDRESS_BOOK 注释
+导入/出 ORG_ADDRESS_BOOK 注释
+导入/出 ORG_ADDRESS_BOOK 注释
+导入/出 ORG_ADDRESS_BOOK 注释
+导入/出 ORG_ADDRESS_BOOK 注释
+导入/出 ORG_ADDRESS_BOOK 注释
+导入/出 ORG_ADDRESS_BOOK 注释
+导入/出 ORG_ADDRESS_BOOK 注释
+导入/出 ORG_ADDRESS_BOOK 注释
+导入/出 ORG_ADDRESS_BOOK 注释
+导入/出 ORG_ADDRESS_BOOK 注释
+导出索引：ORG_ADDRESS_BOOK_PK 
+
+导出模式下的对象权限...
+
+表ORG_ADDRESS_BOOK导出结束，共导出 0 行数据
+
+
+----- [2021-02-26 09:46:36]导出表：ORG_BOOK_VS_USER -----
+
+导入/出 ORG_BOOK_VS_USER 注释
+导入/出 ORG_BOOK_VS_USER 注释
+导入/出 ORG_BOOK_VS_USER 注释
+导入/出 ORG_BOOK_VS_USER 注释
+导入/出 ORG_BOOK_VS_USER 注释
+导入/出 ORG_BOOK_VS_USER 注释
+导入/出 ORG_BOOK_VS_USER 注释
+导入/出 ORG_BOOK_VS_USER 注释
+导入/出 ORG_BOOK_VS_USER 注释
+导出索引：ORG_BOOK_VS_USER_PK 
+
+导出索引：RELATIONSHIP_13_FK 
+
+导出索引：RELATIONSHIP_14_FK 
+
+导出索引：RELATIONSHIP_16_FK 
+
+导出模式下的对象权限...
+
+表ORG_BOOK_VS_USER导出结束，共导出 11 行数据
+
+
+----- [2021-02-26 09:46:44]导出表：RM_DATARIGHT -----
+
+导入/出 RM_DATARIGHT 注释
+导入/出 RM_DATARIGHT 注释
+导入/出 RM_DATARIGHT 注释
+导入/出 RM_DATARIGHT 注释
+导入/出 RM_DATARIGHT 注释
+导出索引：RM_DATARIGHT_PK 
+
+导出索引：RELATIONSHIP_24_FK 
+
+导出模式下的对象权限...
+
+表RM_DATARIGHT导出结束，共导出 4570 行数据
+
+模式[SPT_USER]导出结束.....
+成功导出 第1 个SCHEMA ：SPT_USER
+
+
+共导出 1 个SCHEMA
+
+
+整个导出过程共花费  284.271 s
+
+
+成功终止导出, 没有出现警告

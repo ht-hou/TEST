@@ -1,0 +1,21 @@
+create table T_USER
+(
+user_id Integer not null,
+user_name NVARCHAR2(50),
+user_pwd  Nvarchar2(64),
+  u_token            NVARCHAR2(200),
+  u_token_createtime DATE,
+  u_token_overtime   DATE
+)
+create sequence t_user_ID
+minvalue 1             
+nomaxvalue           
+increment by 1      
+start with 1   
+;
+
+create or replace trigger T_USER_insertId
+before insert on T_USER for each row
+begin
+select user_ID.nextval into:new.id from dual;
+end;

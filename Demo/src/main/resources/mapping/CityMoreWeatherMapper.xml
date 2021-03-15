@@ -15,6 +15,8 @@
  </delete>
     <!--void updataWeather(CityMoreWeather cityMoreWeather);-->
     <update id="updataWeather" parameterType="com.ttttt.demo.pojo.CityMoreWeather">
-        UPDATE  CITY_More_WEATHER SET HIGH=#{high},LOW=#{low},YMD=#{ymd},WEEK=#{week},SUNRISE=#{sunrise},SUNSET=#{sunset},AQI=#{aqi},FX=#{fx},FL=#{fl},TYPE=#{type},NOTICE=#{notice} WHERE ID=#{id} and WEATHER_DATE=#{date}
+        UPDATE  CITY_More_WEATHER SET HIGH=#{high},LOW=#{low},YMD=#{ymd},WEEK=#{week},
+        SUNRISE=#{sunrise},SUNSET=#{sunset},AQI=#{aqi},FX=#{fx},FL=#{fl},TYPE=#{type},NOTICE=#{notice}
+        WHERE ID=#{id} and WEATHER_DATE=#{date}
  </update>
 </mapper>

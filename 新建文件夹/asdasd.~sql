@@ -1,0 +1,128 @@
+drop table choice;
+drop table course;
+drop table student;
+drop table class;
+drop table department;
+
+create table department
+(
+DEPT_NO char(2) not null,
+DEPT_NAME char(15) not null,
+CONSTRAINT department PRIMARY KEY (DEPT_NO)
+);
+
+create table class(
+class_NO char(5) not null ,
+class_NAME char(15) not null,
+dept_no char(2),
+CONSTRAINT class PRIMARY KEY (class_NO),
+constraint dept_no foreign key (dept_no) references department(dept_no)
+);
+ 
+
+create table student
+(
+S_NO char(6)  not null,
+S_NAME char(15) not null,
+S_SEX char(3) default '男'check (S_SEX='男'or S_SEX='女') not NULL,
+S_BIRTHDAY date,
+S_SCORE Number(5,1),
+S_ADDF Number(5,1),
+class_NO char(5),
+CONSTRAINT student PRIMARY KEY (S_NO),
+constraint class_NO foreign key (class_NO) references class(class_NO)
+);
+
+
+create table course
+(
+course_NO char(5) primary key not null,
+course_NAME char(30) not null
+);
+
+create table choice
+(
+S_NO char(6) not null,
+course_NO char(5)not null,
+SCORE number(5,1)
+);
+
+alter table choice 
+add constraint s_no
+foreign key (s_no) references student(s_no)
+on delete cascade;
+
+alter table choice 
+add constraint course_NO
+foreign key (course_NO) references course(course_NO);
+
+alter table choice
+add constraint pk_SC primary key (S_no,course_no);
+
+select userenv('language') from dual;
+
+insert into department values ('d1','化学');
+
+insert into department values ('d2','物理学');
+
+insert into department values ('d3','英语');
+
+insert into department values ('d4','数学');
+
+insert into department values ('d5','文学');
+
+insert into department values ('d6','生物学');
+
+insert into class values ('c001','应用化学1','d1');
+
+insert into class values ('c002','应用化学2','d1');
+
+insert into class values ('c003','应用化学3','d1');
+
+insert into class values ('c004','应用化学4','d1');
+
+insert into class values ('c005','应用化学5','d1');
+
+insert into student values ('d1c1s1','小郑','女',to_date('1989-9-16','YYYY-MM-DD'),456.7,325.1,'c001');
+
+insert into student values ('d1c1s2','张三','男',to_date('1990-10-06','YYYY-MM-DD'),466.7,335.1,'c001');
+
+insert into student values ('d1c1s3','李四','男',to_date('1990-4-03','YYYY-MM-DD'),446.7,345.1,'c001');
+
+insert into student values ('d1c1s4','柳柳','女',to_date('1990-2-02','YYYY-MM-DD'),436.7,355.1,'c002');
+
+insert into student values ('d1c1s5','小爱丽丝','女',to_date('1990-3-16','YYYY-MM-DD'),556.7,365.1,'c002');
+
+insert into student values ('d1c1s6','郑阿斯顿','男',to_date('1990-4-04','YYYY-MM-DD'),656.7,375.1,'c002');
+
+insert into course values ('d1l01','无机化学');
+
+insert into course values ('d1l02','有机化学');
+
+insert into course values ('d1l03','物理化学');
+
+insert into course values ('d1l04','分析化学');
+
+insert into course values ('d1l05','生物化学');
+
+insert into choice values ('d1c1s1','d1l01',88);
+insert into choice values ('d1c1s2','d1l01',69);
+insert into choice values ('d1c1s3','d1l01',83);
+insert into choice values ('d1c1s4','d1l01',60);
+insert into choice values ('d1c1s5','d1l01',70);
+insert into choice values ('d1c1s6','d1l01',75);
+insert into choice values ('d1c1s1','d1l02',80);
+insert into choice values ('d1c1s1','d1l03',85);
+
+--查询编号为c002班级中所有女同学；
+select * from student where class_no='c002'and S_sex='女';
+--查询所有学生出生日期，要求输出格式为'yyyy-mm-dd'；
+select to_char(S_birthday,'yyyy-mm-dd') from student;
+--查询总分（入学成绩+附加分）在550和600之间的所有学生；
+select * from student where  s_score+S_addf between 550 and 800;
+--查询名字中带“小”字的所有学生；
+select * from student where S_name like '%小%';
+--查询所有学生，按总分（入学成绩+附加分）降序排列；
+select * from student   order by s_score+S_addf desc;
+--查询入学成绩大于平均入学成绩的所有学生；
+select * from student where S_score>(select avg(S_score) from student )

@@ -11,7 +11,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonInclude
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class TResourceData implements Serializable {
     private Long rdId;
     private Long rcId;

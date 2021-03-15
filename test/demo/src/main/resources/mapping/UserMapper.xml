@@ -16,7 +16,7 @@ User findUserById(String userId);
     </resultMap>
     <select id="findUserById" parameterType="java.lang.String" resultMap="getUserDb">
          select * from T_USER where user_id=#{userId}
-    </select>
+    </select>m
     <select id="getUser" parameterType="java.lang.String" resultMap="getUserDb">
         select * from T_USER where user_name=#{userName}
     </select>

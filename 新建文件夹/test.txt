@@ -1,0 +1,4 @@
+ String json = "[{\"d\":\"dd\",\"a\":\"aa\"}]";
+        List<Map> parse = (List<Map>) JSON.parse(json);
+        System.out.println(parse.get(0).get("d"));
+

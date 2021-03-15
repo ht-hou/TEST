@@ -1,0 +1,2377 @@
+开始导入模式[SPT_DATA]......
+导入模式中的 NECESSARY GLOBAL 对象……
+导入 PROCEDURE 对象……
+导入 PROCEDURE 对象……
+导入 PROCEDURE 对象……
+导入 PROCEDURE 对象……
+模式中的 NECESSARY GLOBAL 对象导入完成……
+
+----- [2021-02-22 15:08:35]导入表：DATA_CITY -----
+
+创建表 DATA_CITY ...
+导入表 DATA_CITY 的数据：1 行被处理
+导入/出 DATA_CITY 注释
+DATA_CITY
+导入成功……
+
+导入/出 DATA_CITY 注释
+DATA_CITY
+导入成功……
+
+导入/出 DATA_CITY 注释
+DATA_CITY
+导入成功……
+
+导入/出 DATA_CITY 注释
+DATA_CITY
+导入成功……
+
+导入/出 DATA_CITY 注释
+DATA_CITY
+导入成功……
+
+导入/出 DATA_CITY 注释
+DATA_CITY
+导入成功……
+
+导入/出 DATA_CITY 注释
+DATA_CITY
+导入成功……
+
+导入/出 DATA_CITY 注释
+DATA_CITY
+导入成功……
+
+导入/出 DATA_CITY 注释
+DATA_CITY
+导入成功……
+
+导入表的索引:
+DATA_CITY_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:35]导入表：DATA_COMMITTEE -----
+
+创建表 DATA_COMMITTEE ...
+导入表 DATA_COMMITTEE 的数据：7210 行被处理
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入/出 DATA_COMMITTEE 注释
+DATA_COMMITTEE
+导入成功……
+
+导入表的索引:
+DATA_COMMITTEE_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:35]导入表：DATA_COORTYPE -----
+
+创建表 DATA_COORTYPE ...
+导入表 DATA_COORTYPE 的数据：3 行被处理
+导入/出 DATA_COORTYPE 注释
+DATA_COORTYPE
+导入成功……
+
+导入/出 DATA_COORTYPE 注释
+DATA_COORTYPE
+导入成功……
+
+导入/出 DATA_COORTYPE 注释
+DATA_COORTYPE
+导入成功……
+
+导入/出 DATA_COORTYPE 注释
+DATA_COORTYPE
+导入成功……
+
+导入/出 DATA_COORTYPE 注释
+DATA_COORTYPE
+导入成功……
+
+导入/出 DATA_COORTYPE 注释
+DATA_COORTYPE
+导入成功……
+
+导入/出 DATA_COORTYPE 注释
+DATA_COORTYPE
+导入成功……
+
+导入/出 DATA_COORTYPE 注释
+DATA_COORTYPE
+导入成功……
+
+导入/出 DATA_COORTYPE 注释
+DATA_COORTYPE
+导入成功……
+
+导入表的索引:
+DATA_COORTYPE_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:35]导入表：DATA_DISTRICT -----
+
+创建表 DATA_DISTRICT ...
+导入表 DATA_DISTRICT 的数据：16 行被处理
+导入/出 DATA_DISTRICT 注释
+DATA_DISTRICT
+导入成功……
+
+导入/出 DATA_DISTRICT 注释
+DATA_DISTRICT
+导入成功……
+
+导入/出 DATA_DISTRICT 注释
+DATA_DISTRICT
+导入成功……
+
+导入/出 DATA_DISTRICT 注释
+DATA_DISTRICT
+导入成功……
+
+导入/出 DATA_DISTRICT 注释
+DATA_DISTRICT
+导入成功……
+
+导入/出 DATA_DISTRICT 注释
+DATA_DISTRICT
+导入成功……
+
+导入/出 DATA_DISTRICT 注释
+DATA_DISTRICT
+导入成功……
+
+导入/出 DATA_DISTRICT 注释
+DATA_DISTRICT
+导入成功……
+
+导入/出 DATA_DISTRICT 注释
+DATA_DISTRICT
+导入成功……
+
+导入/出 DATA_DISTRICT 注释
+DATA_DISTRICT
+导入成功……
+
+导入表的索引:
+DATA_DISTRICT_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:35]导入表：DATA_STREET -----
+
+创建表 DATA_STREET ...
+导入表 DATA_STREET 的数据：234 行被处理
+导入/出 DATA_STREET 注释
+DATA_STREET
+导入成功……
+
+导入/出 DATA_STREET 注释
+DATA_STREET
+导入成功……
+
+导入/出 DATA_STREET 注释
+DATA_STREET
+导入成功……
+
+导入/出 DATA_STREET 注释
+DATA_STREET
+导入成功……
+
+导入/出 DATA_STREET 注释
+DATA_STREET
+导入成功……
+
+导入/出 DATA_STREET 注释
+DATA_STREET
+导入成功……
+
+导入/出 DATA_STREET 注释
+DATA_STREET
+导入成功……
+
+导入/出 DATA_STREET 注释
+DATA_STREET
+导入成功……
+
+导入/出 DATA_STREET 注释
+DATA_STREET
+导入成功……
+
+导入/出 DATA_STREET 注释
+DATA_STREET
+导入成功……
+
+导入/出 DATA_STREET 注释
+DATA_STREET
+导入成功……
+
+导入表的索引:
+DATA_STREET_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:35]导入表：T_RESOURCE_CATEGORY -----
+
+创建表 T_RESOURCE_CATEGORY ...
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+导入表 T_RESOURCE_CATEGORY 的数据：853 行被处理
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入/出 T_RESOURCE_CATEGORY 注释
+T_RESOURCE_CATEGORY
+导入成功……
+
+导入表的索引:
+T_RESOURCE_CATEGORY_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:35]导入表：T_RESOURCE_DATA -----
+
+创建表 T_RESOURCE_DATA ...
+
+[警告]Error Code:-70005,字符串截断
+导入表 T_RESOURCE_DATA 的数据：67963 行被处理
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入/出 T_RESOURCE_DATA 注释
+T_RESOURCE_DATA
+导入成功……
+
+导入表的索引:
+T_RESOURCE_DATA_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:37]导入表：T_RESOURCE_FIELD -----
+
+创建表 T_RESOURCE_FIELD ...
+导入表 T_RESOURCE_FIELD 的数据：5133 行被处理
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入/出 T_RESOURCE_FIELD 注释
+T_RESOURCE_FIELD
+导入成功……
+
+导入表的索引:
+T_RESOURCE_FIELD_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:37]导入表：CHEM_ENTERPRISE -----
+
+创建表 CHEM_ENTERPRISE ...
+导入表 CHEM_ENTERPRISE 的数据：1 行被处理
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入/出 CHEM_ENTERPRISE 注释
+CHEM_ENTERPRISE
+导入成功……
+
+导入表的索引:
+CHEM_ENTERPRISE_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:37]导入表：CHEMENT_COOR -----
+
+创建表 CHEMENT_COOR ...
+导入表 CHEMENT_COOR 的数据：1 行被处理
+导入/出 CHEMENT_COOR 注释
+CHEMENT_COOR
+导入成功……
+
+导入/出 CHEMENT_COOR 注释
+CHEMENT_COOR
+导入成功……
+
+导入/出 CHEMENT_COOR 注释
+CHEMENT_COOR
+导入成功……
+
+导入/出 CHEMENT_COOR 注释
+CHEMENT_COOR
+导入成功……
+
+导入/出 CHEMENT_COOR 注释
+CHEMENT_COOR
+导入成功……
+
+导入/出 CHEMENT_COOR 注释
+CHEMENT_COOR
+导入成功……
+
+导入表的索引:
+CHEMENT_COOR_PK
+导入成功……
+
+导入表的索引:
+RELATIONSHIP_30_FK
+导入成功……
+
+
+----- [2021-02-22 15:08:37]导入表：CHEM_CAR -----
+
+创建表 CHEM_CAR ...
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+导入表 CHEM_CAR 的数据：5394 行被处理
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入/出 CHEM_CAR 注释
+CHEM_CAR
+导入成功……
+
+导入表的索引:
+CHEM_CAR_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:37]导入表：DATA_COMMITTEE_TEMP -----
+
+创建表 DATA_COMMITTEE_TEMP ...
+导入表 DATA_COMMITTEE_TEMP 的数据：7210 行被处理
+
+----- [2021-02-22 15:08:37]导入表：temp -----
+
+创建表 temp ...
+表 temp 的数据导入完成，共导入数据：0 行
+
+----- [2021-02-22 15:08:37]导入表：RESOURCE_CATEGORY -----
+
+创建表 RESOURCE_CATEGORY ...
+导入表 RESOURCE_CATEGORY 的数据：22 行被处理
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入/出 RESOURCE_CATEGORY 注释
+RESOURCE_CATEGORY
+导入成功……
+
+导入表的索引:
+RESOURCE_CATEGORY_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:37]导入表：RESOURCE_DATA -----
+
+创建表 RESOURCE_DATA ...
+
+[警告]Error Code:-70005,字符串截断
+
+[警告]Error Code:-70005,字符串截断
+导入表 RESOURCE_DATA 的数据：70293 行被处理
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入/出 RESOURCE_DATA 注释
+RESOURCE_DATA
+导入成功……
+
+导入表的索引:
+RESOURCE_DATA_PK
+导入成功……
+
+导入表的索引:
+RELATIONSHIP_11_FK
+导入成功……
+
+
+----- [2021-02-22 15:08:39]导入表：RESOUCEFILE -----
+
+创建表 RESOUCEFILE ...
+导入表 RESOUCEFILE 的数据：2 行被处理
+导入/出 RESOUCEFILE 注释
+RESOUCEFILE
+导入成功……
+
+导入/出 RESOUCEFILE 注释
+RESOUCEFILE
+导入成功……
+
+导入/出 RESOUCEFILE 注释
+RESOUCEFILE
+导入成功……
+
+导入/出 RESOUCEFILE 注释
+RESOUCEFILE
+导入成功……
+
+导入/出 RESOUCEFILE 注释
+RESOUCEFILE
+导入成功……
+
+导入/出 RESOUCEFILE 注释
+RESOUCEFILE
+导入成功……
+
+导入/出 RESOUCEFILE 注释
+RESOUCEFILE
+导入成功……
+
+导入/出 RESOUCEFILE 注释
+RESOUCEFILE
+导入成功……
+
+导入/出 RESOUCEFILE 注释
+RESOUCEFILE
+导入成功……
+
+导入表的索引:
+RESOUCEFILE_PK
+导入成功……
+
+导入表的索引:
+RELATIONSHIP_31_FK
+导入成功……
+
+
+----- [2021-02-22 15:08:39]导入表：RESOURCE_COOR -----
+
+创建表 RESOURCE_COOR ...
+导入表 RESOURCE_COOR 的数据：210810 行被处理
+导入/出 RESOURCE_COOR 注释
+RESOURCE_COOR
+导入成功……
+
+导入/出 RESOURCE_COOR 注释
+RESOURCE_COOR
+导入成功……
+
+导入/出 RESOURCE_COOR 注释
+RESOURCE_COOR
+导入成功……
+
+导入/出 RESOURCE_COOR 注释
+RESOURCE_COOR
+导入成功……
+
+导入/出 RESOURCE_COOR 注释
+RESOURCE_COOR
+导入成功……
+
+导入/出 RESOURCE_COOR 注释
+RESOURCE_COOR
+导入成功……
+
+导入表的索引:
+RESOURCE_COOR_PK
+导入成功……
+
+导入表的索引:
+RELATIONSHIP_32_FK
+导入成功……
+
+
+----- [2021-02-22 15:08:43]导入表：RESOURCE_FIELD -----
+
+创建表 RESOURCE_FIELD ...
+导入表 RESOURCE_FIELD 的数据：92 行被处理
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入/出 RESOURCE_FIELD 注释
+RESOURCE_FIELD
+导入成功……
+
+导入表的索引:
+RESOURCE_FIELD_PK
+导入成功……
+
+导入表的索引:
+RELATIONSHIP_12_FK
+导入成功……
+
+
+----- [2021-02-22 15:08:44]导入表：WEATHER -----
+
+创建表 WEATHER ...
+导入表 WEATHER 的数据：36060 行被处理
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入/出 WEATHER 注释
+WEATHER
+导入成功……
+
+导入表的索引:
+WEATHER_PK
+导入成功……
+
+导入表的索引:
+RELATIONSHIP_34_FK
+导入成功……
+
+
+----- [2021-02-22 15:08:45]导入表：RESOURCE_DATA_TEMP -----
+
+创建表 RESOURCE_DATA_TEMP ...
+导入表 RESOURCE_DATA_TEMP 的数据：1286 行被处理
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+导入/出 RESOURCE_DATA_TEMP 注释
+RESOURCE_DATA_TEMP
+导入成功……
+
+
+----- [2021-02-22 15:08:47]导入表：CAMERATYPE -----
+
+创建表 CAMERATYPE ...
+导入表 CAMERATYPE 的数据：1 行被处理
+导入/出 CAMERATYPE 注释
+CAMERATYPE
+导入成功……
+
+导入/出 CAMERATYPE 注释
+CAMERATYPE
+导入成功……
+
+导入/出 CAMERATYPE 注释
+CAMERATYPE
+导入成功……
+
+导入/出 CAMERATYPE 注释
+CAMERATYPE
+导入成功……
+
+导入表的索引:
+CAMERATYPE_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:47]导入表：CAMERACOOR -----
+
+创建表 CAMERACOOR ...
+导入表 CAMERACOOR 的数据：75540 行被处理
+导入/出 CAMERACOOR 注释
+CAMERACOOR
+导入成功……
+
+导入/出 CAMERACOOR 注释
+CAMERACOOR
+导入成功……
+
+导入/出 CAMERACOOR 注释
+CAMERACOOR
+导入成功……
+
+导入/出 CAMERACOOR 注释
+CAMERACOOR
+导入成功……
+
+导入/出 CAMERACOOR 注释
+CAMERACOOR
+导入成功……
+
+导入/出 CAMERACOOR 注释
+CAMERACOOR
+导入成功……
+
+导入表的索引:
+CAMERACOOR_PK
+导入成功……
+
+导入表的索引:
+RELATIONSHIP_36_FK
+导入成功……
+
+
+----- [2021-02-22 15:08:50]导入表：CRAMERA_TY -----
+
+创建表 CRAMERA_TY ...
+导入表 CRAMERA_TY 的数据：20638 行被处理
+导入/出 CRAMERA_TY 注释
+CRAMERA_TY
+导入成功……
+
+
+----- [2021-02-22 15:08:51]导入表：CAMERA -----
+
+创建表 CAMERA ...
+导入表 CAMERA 的数据：20654 行被处理
+导入/出 CAMERA 注释
+CAMERA
+导入成功……
+
+导入/出 CAMERA 注释
+CAMERA
+导入成功……
+
+导入/出 CAMERA 注释
+CAMERA
+导入成功……
+
+导入/出 CAMERA 注释
+CAMERA
+导入成功……
+
+导入/出 CAMERA 注释
+CAMERA
+导入成功……
+
+导入/出 CAMERA 注释
+CAMERA
+导入成功……
+
+导入/出 CAMERA 注释
+CAMERA
+导入成功……
+
+导入/出 CAMERA 注释
+CAMERA
+导入成功……
+
+导入/出 CAMERA 注释
+CAMERA
+导入成功……
+
+导入/出 CAMERA 注释
+CAMERA
+导入成功……
+
+导入表的索引:
+CAMERA_PK
+导入成功……
+
+导入表的索引:
+RELATIONSHIP_35_FK
+导入成功……
+
+
+----- [2021-02-22 15:08:53]导入表：WEATHERCOOR -----
+
+创建表 WEATHERCOOR ...
+导入表 WEATHERCOOR 的数据：17 行被处理
+导入/出 WEATHERCOOR 注释
+WEATHERCOOR
+导入成功……
+
+导入/出 WEATHERCOOR 注释
+WEATHERCOOR
+导入成功……
+
+导入/出 WEATHERCOOR 注释
+WEATHERCOOR
+导入成功……
+
+导入/出 WEATHERCOOR 注释
+WEATHERCOOR
+导入成功……
+
+导入/出 WEATHERCOOR 注释
+WEATHERCOOR
+导入成功……
+
+导入/出 WEATHERCOOR 注释
+WEATHERCOOR
+导入成功……
+
+导入表的索引:
+WEATHERCOOR_PK
+导入成功……
+
+导入表的索引:
+RELATIONSHIP_33_FK
+导入成功……
+
+
+----- [2021-02-22 15:08:53]导入表：WEATHERPOINT -----
+
+创建表 WEATHERPOINT ...
+导入表 WEATHERPOINT 的数据：17 行被处理
+导入/出 WEATHERPOINT 注释
+WEATHERPOINT
+导入成功……
+
+导入/出 WEATHERPOINT 注释
+WEATHERPOINT
+导入成功……
+
+导入/出 WEATHERPOINT 注释
+WEATHERPOINT
+导入成功……
+
+导入表的索引:
+WEATHERPOINT_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:53]导入表：CHEMICALS -----
+
+创建表 CHEMICALS ...
+导入表 CHEMICALS 的数据：90 行被处理
+导入/出 CHEMICALS 注释
+CHEMICALS
+导入成功……
+
+导入/出 CHEMICALS 注释
+CHEMICALS
+导入成功……
+
+导入/出 CHEMICALS 注释
+CHEMICALS
+导入成功……
+
+导入/出 CHEMICALS 注释
+CHEMICALS
+导入成功……
+
+导入/出 CHEMICALS 注释
+CHEMICALS
+导入成功……
+
+导入表的索引:
+CHEMICALS_PK
+导入成功……
+
+
+----- [2021-02-22 15:08:53]导入表：TABLECA -----
+
+创建表 TABLECA ...
+导入表 TABLECA 的数据：20656 行被处理
+
+----- [2021-02-22 15:08:55]导入表：COOR -----
+
+创建表 COOR ...
+导入表 COOR 的数据：4170 行被处理
+
+----- [2021-02-22 15:08:55]导入表：DATA -----
+
+创建表 DATA ...
+导入表 DATA 的数据：1504 行被处理
+导入模式中的 GLOBAL 对象……
+模式中的 GLOBAL 对象导入完成……
+模式[SPT_DATA]导入完成......
+
+导入表的约束:
+CONS134219122
+导入成功……
+
+整个导入过程共花费   21.957 s
+
+
+成功终止导入, 但出现警告

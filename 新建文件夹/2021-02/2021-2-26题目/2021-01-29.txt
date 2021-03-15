@@ -1,0 +1,28 @@
+达梦数据库
+
+地址 localhost
+端口  5236
+模式名  SPT_USER
+用户名  SPT_USER
+密码     123456789 
+
+1 用户管理，新增，修改，删除(停用),分页查看，搜索条件
+
+2 使用的表 org_user 用户表，
+
+org_department 部门表
+
+org_user_vs_dep部门和用户关联表
+
+
+role 部门角色表(每个部门下有三种不同角色，用户新增选择部门的时候选择角色)
+
+3 参照系统  
+http://yjcj.yjglj.sh.gov.cn:8091/net//CityPlat/#/login
+
+用户名  15036788423
+密码      a123456789
+组织机构下用户管理模块
+
+
+

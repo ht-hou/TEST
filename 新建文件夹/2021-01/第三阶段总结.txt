@@ -1,0 +1,212 @@
+第三阶段总结：
+spring理解
+1.降低了组间之间的耦合性，实现了软件各层之间的解耦
+2 提供更多服务，事务管理，消息服务
+3 提供了单例模式
+4 提供了 aop技术实现了权限拦截 运行期监控
+ioc
+反射机制   单例  容器 配置文件 
+aop 
+动态代理   jdk  cglib    
+DI
+设置注入  构造注入  
+
+spring支持的事务管理
+声明式事务管理  
+编程式事务管理   transactiontemplate  事务管理和业务代码分离  通过注解和xml配置
+1.编程 是自己写事务处理的类，然后调用
+2.声明 是在配置文件中配置一般搭配在框架里面使用
+
+依赖注入的方式
+1.set方法注入
+2.构造器注入
+3。静态工厂的方法注入
+4.实例工厂的方法注入
+
+spring 实现事务的方式有哪些
+1.aop实现事务
+2.事务代理工厂bean实现事务
+3.注解方式实现事务
+
+springmvc执行流程
+1.客户端发送请求到dispatcherservlet
+2.接到请求后交给处理器映射器（handlermapping）
+3.根据请求进行匹配查找URL的handler返回一个执行链
+4.dispatcherservlet 在请求处理器适配器（handleradapter）调用相应的
+handler 进行处理并返回modelandview给dispatcherservlet
+5.dispatcherservlet将modelandview请求（视图解析器viewreslover）解析返回具体的view
+6.dispatcherservlet对view进行渲染
+7.dispatcherservlet将页面相应给用户
+
+
+mybatis 中 #{} 和${} 有什么区别
+#相当于对数据加上了双引号“”   $相当于直接显示数据
+#将传入的数据当成一个字符串，会自动传入的数据加一个双引号，
+$ 将传入的数据直接显示在sql中
+# 方式防止SQL注入    $方式 无法防止SQL注入
+$一般用于传入数据库对象，例如 表名
+
+mybatis 应用动态sql解决了什么问题
+
+
+springbean的生命周期
+一个bean实例被初始化时需要执行一系列初始化操作才能达到可用的状态，
+springbeanfactory负责管理在容器中被创建的bean的生命周期
+bean的生命周期由两组回调方法组成（call back）
+初始化之后调用回调方法   销毁之前调用回调方法
+
+disposableBean回调接口
+aware接口 
+bean配置文件中的custom init（）    destory（）
+@postconstruct   @preDestory    注解方式
+
+怎么保证缓存和数据库的一致性
+通过key过期时间 mysql更新时Redis不更新 实现简单 不一致时间很长   请求频繁
+过期时间很长产生很多脏读数据
+开发成本低 易于实现
+管理成本低，出现概率小
+不足 完全依赖过期时间 时间短 出现缓存失败时间太长会出现更新延迟（不一致）
+
+spring中用到了那些设计模式
+单例模式    spring配置文件中定义的bean默认为单例的
+代理模式  在aop和remoting中被调用的比较多
+工厂模式    beanfactory 用来创建对象的实例
+模板方法   用来解决代码重复的问题
+
+
+mybatis 和 hibernate 区别
+h 全封装  mybatis半封装   使用h做单表查询操作的时候比较简单，h是针对于对象进行操作的
+但多表查询起来就比较麻烦，  h在sql优化上会低于m 因为h会查询所有表中的字段，比价消耗性能
+
+mybatis 的缓存
+一级缓存 SQLsession级别的  默认支持一级缓存  不需要配置
+二级缓存 mapper级别的  要在 sqlmapconfig.xml中设置二级缓存的总开关
+还要在具体的mapper.xml中开启二级缓存
+
+springmvc 的注解
+@requestMapping    请求URL映射
+@requestbody   接收HTTP请求的json数据将json数据转化为java对象
+@responsebody  将controller方法返回对象转化为json响应给客户
+
+spring注解
+@service   
+@transactionnal
+@repository
+
+@controller 
+@requestMapping   
+@pathvariable   从URL请求路径中获取数据
+
+mybatis编程流程
+1  创建sqlsessionfactory 
+2  通过sqlsessionfactory创建SQLsession
+3   通过sqlsession执行数据库的操作
+4    调用 session.commit（）  提交事务
+5   调用 session.close（）  关闭事务
+
+
+mabatis  优点
+易于上手  
+sql写在 xml文件中，便于统一管理和优化
+减少sql 与程序代码的耦合
+提供的xml标签 支持动态SQL的编写
+
+缺点  
+SQL 工作量大字段多，关联表多
+SQL依赖于数据库 导致数据库移植性比较差
+xml标签id必须唯一导致dao 中方法不支持方法重载，所以dao层必须是接口
+
+mabatis  半自动orm  与全自动有什么区别
+hibernate 是全自动orm映射工具
+查询关联对象或关联集合对象的时候可以根据对象关系模型直接获取所以是全自动的
+mybatis 在查询关联对象或关联集合的对象的时候 需要手动编写sql来完成 
+所以称之为半自动orm映射工具
+
+
+sql 优化
+where having之后
+exists  替代in      用 not exists  替代 not in
+避免在索引列上使用计算
+避免在索引列上使用is null 和is not null
+
+
+事务  隔离级别  特性
+transaction  是并发控制的基本单位，是一个操作序列，操作 要么都执行，要么都不执行
+是一个不可分割的工作单位 事务是数据库维护数据一致性的单位，每个事务结束时都能保持数据一致性
+
+4中隔离级别  
+串行化  一个事物一个事物的执行
+可重复度   无论其他事务是否修改并提交了数据，在这个事务中看到的数据值
+始终不受其他事务的影响
+读已提交   其他事务提交了对数据的修改后，本事务就能读取到修改后的数据值
+读未提交    其他事务只要修改了数据，即使未提交本事务也能看到修改后的数据值
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

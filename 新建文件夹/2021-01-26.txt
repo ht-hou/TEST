@@ -1,0 +1,24 @@
+达梦数据库
+
+
+1资源表新增修改删除功能，
+2能保存资源相关的附件，上传的文件详细内要能查看列表
+3编辑时附件也可删除或新增
+
+地址 localhost
+端口  5236
+模式名  SPT_DATA
+用户名  SPT_DATA
+密码     123456789 
+
+使用的表
+
+资源类别RESOURCE_CATEGORY
+
+资源数据RESOURCE_DATA
+
+资源坐标RESOURCE_COOR
+
+资源附件RESOUCEFILE
+
+

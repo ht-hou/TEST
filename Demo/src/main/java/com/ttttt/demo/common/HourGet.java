@@ -110,22 +110,25 @@ public class HourGet {
     private synchronized void toDX(Map data, String code) {
         String id = code.trim();
         CityNowWeather cityNowWeather = new CityNowWeather();
-        cityNowWeather.setShidu(data.get("shidu").toString());
-        cityNowWeather.setPm25(data.get("pm25").toString());
-        cityNowWeather.setPm10(data.get("pm10").toString());
-        cityNowWeather.setGanmao(data.get("ganmao").toString());
-        cityNowWeather.setWendu(data.get("wendu").toString());
-        cityNowWeather.setQuality(data.get("quality").toString());
+        cityNowWeather.setShidu(String.valueOf(data.get("shidu").toString()));
+        cityNowWeather.setPm25(String.valueOf(data.get("pm25").toString()));
+        cityNowWeather.setPm10(String.valueOf(data.get("pm10").toString()));
+        cityNowWeather.setGanmao(String.valueOf(data.get("ganmao").toString()));
+        cityNowWeather.setWendu (String.valueOf(data.get("wendu").toString()));
+        cityNowWeather.setQuality(String.valueOf(data.get("quality")));
         cityNowWeather.setId(id);
         String yesterdayData = String.valueOf(data.get("yesterday"));
         String forecast = String.valueOf(data.get("forecast"));
         // String forecast = (String) data.get("forecast");
         CityMoreWeather yesterday = JSON.parseObject(yesterdayData, CityMoreWeather.class);
         List<CityMoreWeather> cityMoreWeathers = JSON.parseArray(forecast, CityMoreWeather.class);
-        cityMoreWeathers.add(yesterday);
-        for (CityMoreWeather cityMoreWeather :
-                cityMoreWeathers) {
-            cityMoreWeather.setId(id);
+        cityMoreWeathers.add(0,yesterday);
+        for(int i = 0;i<cityMoreWeathers.size();i++){
+
+            CityMoreWeather cityMoreWeather = cityMoreWeathers.get(i);
+
+            cityMoreWeather.setId(id+"-"+i);
+
         }
 
         weatherService.SetWeather(cityNowWeather, cityMoreWeathers);
