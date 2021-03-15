@@ -4,6 +4,7 @@ import com.ex.coor.entity.ResourceData;
 import com.ex.coor.entity.ResourceDataExample;
 import com.ex.coor.entity.pojo.ParamData;
 import com.ex.coor.entity.pojo.ParamDto;
+import com.ex.coor.entity.pojo.ResourceDataAndCoor;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -35,8 +36,8 @@ public interface ResourceDataMapper {
 
     int updateByPrimaryKey(ResourceData record);
 
-    List<ResourceData> selectByChengYun(ParamData paramData);
+    List<ResourceDataAndCoor> selectByChengYun(ParamData paramData);
 
-     List<ResourceData> gpsAndGd( ParamDto doubles);
+     List<ResourceDataAndCoor> gpsAndGd( ParamDto doubles);
 
 }
